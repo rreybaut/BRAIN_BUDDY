@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :vocals, only: [:create, :index, :share, :destroy]
-  resources :gps, only: [:create, :index, :share, :destroy]
+  resources :vocals, only: [:create, :index, :destroy]
 
-  resources :lists, only: [:index, :new, :create, :show, :share, :update, :destroy] do
+  resources :gps, only: [:create, :index, :destroy]
+
+  resources :lists, only: [:index, :new, :create, :show, :update, :destroy] do
       resources :listelements, only: :create
   end
 
-   resources :nfts, only: [:create, :index, :share, :destroy]
- end
+  resources :nfts, only: [:create, :index, :destroy]
+end
