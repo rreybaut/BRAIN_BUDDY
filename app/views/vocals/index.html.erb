@@ -1,0 +1,23 @@
+
+  <h1>Vocals</h1>
+  <div class="container">
+<%= simple_form_for(@vocal) do |f| %>
+  <%= f.input :audio %>
+  <%= f.submit %>
+<% end %>
+</div>
+<ul>
+<% @vocals.each do |vocal| %>
+<li>
+<%= "#{vocal.audio} - Cree le #{vocal.created_at}" %>
+</li>
+    <%= link_to "Delete", vocal_path(vocal), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"},class: "btn btn-primary"  %>
+<% end %>
+</ul>
+  <br>
+  <%= link_to "Back to index", "/",class: "btn btn-primary" %>
+
+
+
+  <br>
+  </div>
