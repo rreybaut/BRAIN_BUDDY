@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :vocals, only: [:create, :index, :share, :destroy]
-  resources :gps, only: [:create, :index, :share, :destroy]
+  resources :localisations, only: [:create, :index, :destroy]
 
   resources :lists, only: [:index, :new, :create, :show, :share, :update, :destroy] do
       resources :listelements, only: :create
