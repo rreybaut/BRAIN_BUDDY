@@ -1,0 +1,2 @@
+class ListelementsController < ApplicationController
+end
