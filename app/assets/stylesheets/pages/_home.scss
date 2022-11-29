@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.wrapper {
+  background-image: url(/app/assets/images/mobile.png);
+  height: 100vh;
+  background-size: cover;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
