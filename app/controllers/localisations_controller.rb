@@ -1,0 +1,2 @@
+class LocalisationsController < ApplicationController
+end
