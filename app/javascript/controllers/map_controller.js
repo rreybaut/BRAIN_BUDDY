@@ -20,7 +20,6 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
 
-
   #addMarkersToMap() {
 
     this.markersValue.forEach((marker) => {
