@@ -1,5 +1,6 @@
 class VocalsController < ApplicationController
   before_action :authenticate_user!, only: [:index]
+
   def index
     @vocals = Vocal.all
     @vocal = Vocal.new
@@ -8,11 +9,10 @@ class VocalsController < ApplicationController
   def create
     @vocal = Vocal.new(vocal_params)
     @vocal.user = current_user
-    if @vocal.save
 
+    if @vocal.save
       redirect_to vocals_path
     else
-
       render :index, status: :unprocessable_entity
     end
   end
@@ -26,6 +26,6 @@ class VocalsController < ApplicationController
   private
 
   def vocal_params
-    params.require(:vocal).permit(:audio, :user_id)
+    params.require(:vocal).permit(:title, :audio, :user_id)
   end
 end
