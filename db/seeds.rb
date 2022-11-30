@@ -17,6 +17,6 @@ karine = User.create!(email: "karine.egler@gmail.com", password:"123456", prenom
 valeria = User.create!(email: "valerianpallas@gmail.com", password:"123456", prenom: "Valeria", nom: "Pallas", emergency_number: "0754536825")
 raphael = User.create!(email: "rreybaut@gmail.com", password:"123456", prenom: "Raphael", nom: "Reybaut", emergency_number: "0621888582" )
 
-Localisation.create!(user_id: karine.id, address: "55 Av Borriglione, Nice")
-Localisation.create!(user_id: valeria.id, address: "68 Av Gambetta, Nice")
-Localisation.create!(user_id: raphael.id, address: "25 Av Jean Medecin, Nice")
+Localisation.create!(user_id: karine.id, address: "55 Av Borriglione, Nice", longitude: 7.261375, latitude: 43.7163432)
+Localisation.create!(user_id: valeria.id, address: "20 bd Gambetta, Nice", longitude: 7.2561841, latitude: 43.7025862)
+Localisation.create!(user_id: raphael.id, address: "25 Av Jean Medecin, Nice", longitude: 7.2672797, latitude: 43.7013388)
