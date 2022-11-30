@@ -2,5 +2,12 @@
   <div class="wrapper">
     <%= image_tag("bb_idee.png") %>
     <h1>Brain Buddy</h1><p>Ton copain cérébral</p>
+    <br>
+    <div class="container-flex">
+      <h5>Choisis ton outil :</h5>
+      <%= link_to "Message Vocal", vocals_path, class: "btn btn-success" %>
+      <%= link_to "Créer une liste", vocals_path, class: "btn btn-success" %>
+      <%= link_to "Position GPS", localisations_path, class: "btn btn-success" %>
+    </div>
   </div>
 </div>
