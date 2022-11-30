@@ -8,10 +8,8 @@ Rails.application.routes.draw do
 
   resources :vocals, only: [:create, :index, :destroy]
   resources :localisations, only: [:create, :index, :destroy]
-
   resources :lists, only: [:index, :new, :create, :show, :update, :destroy] do
       resources :listelements, only: :create
   end
-
-   resources :nfts, only: [:create, :index, :destroy]
- end
+  resources :nfts, only: [:create, :index, :destroy]
+end
