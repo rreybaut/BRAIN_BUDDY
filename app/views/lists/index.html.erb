@@ -1,0 +1,29 @@
+<div class="banner">
+  <h1>Liste de tâches</h1>
+</div >
+<div class="container">
+  <div class="wrapper-vocals">
+        <h1>Dictez votre liste</h1>
+    </div>
+    <div class="container">
+      <%= simple_form_for (@list) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :date, as: :date%>
+      <%= f.label "Add a comment :" %>
+      <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
+      <% end %>
+    </div>
+    <br>
+    <h1>Vos messages</h1>
+    <div class="container-flex">
+        <% @lists.each do |list| %>
+            <div class="msg">
+              <em class="ita-msg"><%= "(créé le #{list.created_at}) :" %></em>
+              <%# <p><%= "#{list.audio}" %></p>
+              <%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-warning" %>
+            </div>
+            <br>
+          <% end %>
+    </div>
+  </div>
+</div>
