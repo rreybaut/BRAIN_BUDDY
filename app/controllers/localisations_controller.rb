@@ -9,7 +9,6 @@ class LocalisationsController < ApplicationController
           lng: position.longitude,
           lat: position.latitude
         }
-
       end
     end
 
