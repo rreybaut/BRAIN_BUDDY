@@ -12,9 +12,15 @@
 @import "pages/index";
 
 body {
+  font-family: 'Roboto Condensed', sans-serif;
   height: 100vh;
-  background-image: url(/app/assets/images/mobile.png);
-  background-position: center;
-  background-size: cover;
-  background: linear-gradient(180deg, #008f8c, white);
+  // background-image: asset-url("mobile.png");
+  // background-position: center;
+  // background-size: cover;
+  background: linear-gradient(180deg, #008f8c, #93d4d3);
+  h1 {
+    font-family: 'Roboto Light 300', sans-serif;
+    font-weight: 100;
+    color: white;
+  }
 }

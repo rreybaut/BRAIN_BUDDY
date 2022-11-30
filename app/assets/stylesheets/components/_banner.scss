@@ -1,0 +1,17 @@
+.banner {
+  background-image: asset-url("banner_vocals.jpg");
+  background-size: cover;
+  background-position: top;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 240px;
+  background-color: aqua;
+  h1 {
+    font-family: 'Roboto Light 300', sans-serif;
+    font-weight: 100;
+    font-size: 4em;
+    color: #ffffff63;
+  }
+}
