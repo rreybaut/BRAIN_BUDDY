@@ -11,22 +11,23 @@
     <%# </div>
   </div>
 </div> %>
+
 <div class="homepage">
-  <div class="ronded-container-homepage">
-    <div class="image-homepage">
-      <h1>Brain Buddy</h1>
-    </div>
-  </div>
+  <h1 class="rotate-title"><strong>Brain</strong></h1>
+  <h1 class="title">Buddy</h1>
   <div class="links-homepage">
     <%= link_to "Message Vocal", vocals_path, class: "btn btn-success" %>
-  </div>
-  <br>
-  <div class="links-homepage">
+
     <%= link_to "Créer une liste", vocals_path, class: "btn btn-success" %>
-  </div>
-  <br>
-  <div class="links-homepage">
+
     <%= link_to "Position GPS", localisations_path, class: "btn btn-success" %>
+
+    <%= link_to "NTF Photo", nfts_path, class: "btn btn-success" %>
+
+    <%= link_to "Appel d'Urgence", nfts_path, class: "btn btn-success" %>
   </div>
-  <br>
+  <div class="logos-container">
+  <%= image_tag "bb_micro.png", class: "homepage-logo" %>
+  <%= image_tag "bb_idee.png", class: "homepage-logo" %>
+  </div>
 </div>

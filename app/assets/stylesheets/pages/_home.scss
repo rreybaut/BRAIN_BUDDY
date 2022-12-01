@@ -1,33 +1,54 @@
-
-
-
-
-
-.home-page {
-  background: rgb(126, 192, 173);
-  padding: 15px 50px;
-  margin-top: 10%;
-
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
+  font-family: 'Roboto Bold', sans-serif;
 }
 
-.ronded-container-homepage {
-  background: white;
-  // background-size: cover;
-  // background-position: center;
-  height: 180px;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+.homepage {
+  height: 100vh;
+  position: relative;
 
-.links-homepage {
-  height: 50px;
-  color: white;
-  font-size: 24px;
-  border-radius: 5px;
+  .rotate-title {
+    position: absolute;
+    top: -38px;
+    left: 75px;
+    transform: rotate(-15deg);
+    color: $fushia;
+    font-weight: 500;
+    font-size: 40px;
+    transform: rotate(-15deg);
+  }
+
+  .title{
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+
+  }
+  .links-homepage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    .btn{
+      margin-top: 36px;
+      width: 200px;
+      height: 42px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .logos-container {
+    display: flex;
+    position: absolute;
+    bottom: 70px;
+    .homepage-logo {
+      width: 190px;
+      object-fit: cover;
+    }
+  }
 }
