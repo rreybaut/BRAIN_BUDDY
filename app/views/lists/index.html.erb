@@ -13,6 +13,7 @@
       <%= f.input :date, as: :date%>
       <%= f.label "Add a comment :" %>
       <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
+      <%= render "shared/form_listselements" %>
       <% end %>
       </div>
     </div>
@@ -26,6 +27,7 @@
               <%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-warning" %>
             </div>
             <br>
+
           <% end %>
         </div>
       </div>
