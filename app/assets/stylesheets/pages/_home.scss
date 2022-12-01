@@ -1,59 +1,33 @@
-// Specific CSS for your home-page
-.center-home {
-  display: flex;
-  height: 75vh;
+
+
+
+
+
+.home-page {
+  background: rgb(126, 192, 173);
+  padding: 15px 50px;
+  margin-top: 10%;
+
+}
+
+.ronded-container-homepage {
+  background: white;
+  // background-size: cover;
+  // background-position: center;
+  height: 180px;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-.container {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1 {
-    font-family: 'Roboto Light 300', sans-serif;
-    font-weight: 100;
-    color: white;
-    font-size: 2em;
-  }
-}
-.wrapper {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.wrapper-vocals {
-  width: 50vw;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.msg {
-  width: 20vw;
-  text-align: center;
-  background-color: white;
-  border-radius: 8px;
-  padding: 8px;
-  box-shadow: 4px 8px 12px #123e3d26;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  h5 {
-    font-weight: bold;
-  }
-  .ita-msg {
-    font-size: 0.9em;
-  }
-  #new_vocal {
-    width: 50vw;
-  }
-}
-.container-flex {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: baseline;
+
+.links-homepage {
+  height: 50px;
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
 }
