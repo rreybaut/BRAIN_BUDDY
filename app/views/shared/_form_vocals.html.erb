@@ -1,0 +1,10 @@
+<div>
+  <% @vocals.each do |vocal| %>
+  <div class="msg">
+    <p><%= "#{vocal.name}" %></p>
+    <em class="ita-msg"><%= "(créé le #{vocal.created_at}) :" %></em>
+    </div>
+  <br>
+  <% end %>
+  <br>
+</div>
