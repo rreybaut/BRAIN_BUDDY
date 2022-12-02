@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :lists, only: [:index, :new, :create, :show, :update, :destroy] do
       resources :listelements, only: :create
   end
-  resources :nfts, only: [:create, :index, :destroy]
+  resources :nfts, only: [:show, :create, :index, :destroy]
 end
