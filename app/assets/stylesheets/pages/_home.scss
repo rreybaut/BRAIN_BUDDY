@@ -53,66 +53,14 @@ body {
     }
   }
 
-  .vocalpage {
-    height: 100vh;
-    position: relative;
+  /* Medium devices */
 
-    .rotate-title {
-      position: absolute;
-      top: -38px;
-      left: 75px;
-      transform: rotate(-15deg);
-      color: $fushia;
-      font-weight: 500;
-      font-size: 40px;
-      transform: rotate(-15deg);
-    }
-
-    .title {
-      margin: auto;
-      color: white;
-      font-weight: bold;
-      font-size: 38px;
-      text-align: center;
-    }
-
-    .subtitle {
-      margin: auto;
-      color: $verttitle;
-      font-weight: 50;
-      font-size: 24px;
-      text-align: center;
-    }
-
-    .form-vocal{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 50%;
-      margin: auto;
-      .btn{
-        margin-top: 36px;
-        width: 200px;
-        height: 42px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-    }
-    .logos-container {
-      display: flex;
-      position: absolute;
-      bottom: 70px;
-      .homepage-logo {
-        width: 190px;
-        object-fit: cover;
-      }
-    }
-    // .scroller {
-    //   width: 300px;
-    //   height: 100px;
-    //   overflow-y: scroll;
-    //   scrollbar-color: $fushia;
-    //   scrollbar-width: thin;
-    // }
-
-  }
+// @media (max-width: 768px) {
+//   .homepage {
+//     flex-direction: column;
+//     height: auto;
+//   }
+//   .logos-container {
+//     height: 50px;
+//   }
+// }
