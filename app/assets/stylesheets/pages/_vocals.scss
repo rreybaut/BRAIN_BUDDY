@@ -5,8 +5,11 @@ body {
   font-family: 'Roboto Bold', sans-serif;
 }
 .vocalpage {
-  height: 100vh;
   position: relative;
+
+  .sound_record {
+    display: flex;
+  }
 
   .rotate-title {
     position: absolute;
@@ -51,7 +54,6 @@ body {
     flex-wrap: wrap;
     width: 50%;
     margin: auto;
-
     .btn-success{
       margin-top: 36px;
       width: 200px;
@@ -60,15 +62,14 @@ body {
       font-weight: bold;
       color: #008f8c;
     }
-    }
+  }
 
-
-  .logos-container {
+  .logos-container-vocals {
     display: flex;
     position: absolute;
-    bottom: 50px;
-    .homepage-logo {
-      width: 90px;
+    bottom: 70px;
+    .vocals-logo {
+      width: 190px;
       object-fit: cover;
     }
   }
@@ -79,15 +80,14 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
-
 }
 
   /* Medium devices */
 
-  @media (max-width: 1400px) {
+@media (max-width: 1400px) {
   .vocalpage {
     // flex-direction: column;
-    height: 300%;
+    height: 100vh;
   }
 }
 
