@@ -1,0 +1,21 @@
+<%# <div class="container show-container">
+  <div class="d-flex" >
+    <div class="parent">
+      <div class="card">
+        <p>photo: <%= @nft%> </p>
+      <%# </div>
+    </div>
+    <%= cl_image_tag @nft.photo.key, height: 350, width: 450, crop: :fill, class: "image" %>
+  <%# </div>
+    <br>
+    <%# <%= link_to "Create", new_nfts__path(@nft), class: "btn btn-primary" %> %>
+    <br>
+    <%# <%= link_to "Back to create", nfts_path, class: "btn btn-primary" %> %>
+    <%# <br> %>
+    <%# <%= link_to "Update", edit_nfts_path(@offer),data: {turbo_method: :update},class: "btn btn-primary" %> %>
+    <%# <br> %>
+    <%# <%= link_to "Delete", edit_nfts_path(@offer),data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"},class: "btn btn-danger" %> %> %>
+<%# </div> %> %> %>
+
+  <br>
+  <%= link_to "Back to create nft", nfts_path  %>
