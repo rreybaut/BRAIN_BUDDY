@@ -1,0 +1,20 @@
+.create-address-container{
+  display: flex;
+  justify-content:space-around;
+  .input-create-address {
+    width: 200px;
+  }
+  .submit-create-map{
+    background: none;
+    border: none;
+    font-weight: bold;
+  }
+}
+
+.map-title{
+  margin: auto;
+  color: #27EB9D;
+  font-weight: 50;
+  font-size: 24px;
+  text-align: center;
+}
