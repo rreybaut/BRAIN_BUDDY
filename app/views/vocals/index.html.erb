@@ -1,30 +1,32 @@
-<div class="banner">
-  <h1>Les messages vocaux</h1>
-</div >
-<div class="container">
-  <div class="wrapper-vocals">
-        <h1>Crééz un message</h1>
-    </div>
-    <div class="container">
+<div class="vocalpage">
+  <h1 class="rotate-title"><strong>Brain</strong></h1>
+  <h1 class="title">Buddy</h1>
+  <h2 class="subtitle">Message Vocal</h2>
+  <div class="flexbox">
       <%= simple_form_for (@vocal) do |f| %>
         <%= f.label "Titre" %>
         <%= f.input :name, label: false %>
-        <%= f.input :audio %>
+
         <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
       <% end %>
-    </div>
+  </div>
     <br>
-    <h1>Vos messages</h1>
-    <div class="container-flex">
-        <% @vocals.each do |vocal| %>
-            <div class="msg">
-              <h5><%= "#{vocal.name}" %></h5>
-              <em class="ita-msg"><%= "(créé le #{vocal.created_at}) :" %></em>
-              <p><%= "#{vocal.audio}" %></p>
-              <%= link_to "Delete", vocal_path(vocal), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-warning" %>
-            </div>
-            <br>
-          <% end %>
+    <h1 class="messages">Messages</h1>
+  <div class="form-vocal">
+    <div class="scroller">
+      <% @vocals.each do |vocal| %>
+        <div class="msg">
+          <h5><%= "#{vocal.name}" %></h5>
+          <em class="ita-msg"><%= "(créé le #{vocal.created_at}) :" %></em>
+          <p><%= "#{vocal.audio}" %></p>
+          <%= link_to "", vocal_path(vocal), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "far fa-trash-alt" %>
+        </div>
+        <br>
+        <% end %>
     </div>
+  </div>
+  <div class="logos-container">
+      <%= image_tag "bb_micro.png", class: "homepage-logo" %>
+      <%= image_tag "bb_loupe.png", class: "homepage-logo" %>
   </div>
 </div>
