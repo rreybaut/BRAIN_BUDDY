@@ -13,12 +13,13 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/mapbox/streets-v10",
       center: [7.26, 43.72],
-      zoom: 10
+      zoom: 15
     })
-
+    const geoloc = this.map.addControl(new mapboxgl.GeolocateControl())
+    console.log(geoloc)
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
-  }
+    }
 
   #addMarkersToMap() {
 
