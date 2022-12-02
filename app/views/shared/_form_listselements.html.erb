@@ -1,5 +1,7 @@
+<div class="container">
   <%= simple_form_for [@list, @listelement] do |f| %>
-    <%= f.input :content %>
-    <%= f.label "Add a comment :" %>
-    <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
-<% end %>
+    <%= f.label "Ajoutez une tâche :" %>
+    <%= f.input :content, label: false %>
+    <%= f.button :submit, 'Ajouter', class: 'btn btn-success' %>
+  <% end %>
+</div>
