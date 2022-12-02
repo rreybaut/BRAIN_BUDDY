@@ -1,0 +1,9 @@
+<% @lists.each do |list| %>
+  <div class="obj-list">
+    <h5><%= "#{list.title}" %></h5>
+    <em class="ita-msg"><%= "(créé le #{list.created_at}) :" %></em>
+    <br>
+    <%= link_to "Aficher", list_path(list), class: "btn btn-warning" %>
+    <%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-warning" %>
+  </div>
+<% end %>
