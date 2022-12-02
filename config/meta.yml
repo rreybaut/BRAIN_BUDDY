@@ -1,5 +1,5 @@
 meta_name: "Brain Buddy"
 meta_title: "Brain Buddy - Ton secretaire"
 meta_description: "Aide memoire, enregistre messages vocals, faite de liste et partage, botton d'appel urgence"
-meta_image: "bb_idee.png" # should exist in `app/assets/images/`
+meta_image: "bb_favicon_1.png" # should exist in `app/assets/images/`
 twitter_account: "@MdqPon"   # required for Twitter Cards
