@@ -11,9 +11,6 @@
     <%# </div>
   </div>
 </div> %>
-<% content_for :meta_title, "#{@brainbuddy.name} is on #{DEFAULT_META["brain_buddy"]}" %>
-<% content_for :meta_description, @brainbuddy.description %>
-<% content_for :meta_image, cl_image_path(@brainbuddy.photo.path) if @brainbuddy.photo.present? %>
 
 <div class="homepage">
 

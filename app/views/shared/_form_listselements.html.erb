@@ -1,4 +1,4 @@
-  <%= simple_form_for (@listelement) do |f| %>
+  <%= simple_form_for [@list, @listelement] do |f| %>
     <%= f.input :content %>
     <%= f.label "Add a comment :" %>
     <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
