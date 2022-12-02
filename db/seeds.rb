@@ -20,3 +20,7 @@ raphael = User.create!(email: "rreybaut@gmail.com", password:"123456", prenom: "
 Localisation.create!(user_id: karine.id, address: "55 Av Borriglione, Nice", longitude: 7.261375, latitude: 43.7163432)
 Localisation.create!(user_id: valeria.id, address: "20 bd Gambetta, Nice", longitude: 7.2561841, latitude: 43.7025862)
 Localisation.create!(user_id: raphael.id, address: "25 Av Jean Medecin, Nice", longitude: 7.2672797, latitude: 43.7013388)
+Localisation.create!(user_id: karine.id, address: "300 Av du General De Gaulle, Saint Laurent du Var", longitude: 7.1917881, latitude:43.6687945 )
+Localisation.create!(user_id: karine.id, address: "10 rue de Rome, Marseille", longitude: 5.3785415 , latitude: 43.2950062)
+Localisation.create!(user_id: karine.id, address: "18 rue Bonaparte, Nice", longitude: 7.2672797, latitude: 43.7013388)
+Localisation.create!(user_id: karine.id, address: "19 rue Hoche, Cannes", longitude:0.0 , latitude: nil)

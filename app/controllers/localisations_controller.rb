@@ -1,9 +1,15 @@
 class LocalisationsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
-  before_action :set_localisation, only: [:show, :destroy]
+  before_action :authenticate_user!, only: [:new, :index]
+  before_action :set_localisation, only: [:show, :destroy, :edit]
 
     def index
-      @localisations = Localisation.all
+      @localisation = Localisation.new
+
+      if current_user
+        @localisations = Localisation.where(user_id: current_user.id)
+      else
+        @localisations =  []
+      end
       @markers = @localisations.geocoded.map do |flat|
         {
           lat: flat.latitude,
@@ -12,23 +18,26 @@ class LocalisationsController < ApplicationController
       end
     end
 
+  def destroy
+  end
 
-      def create
-       @localisation = Localisation.new(localisation_params)
-          if @localisation.save
-            redirect_to localisation_path(@localisation)
+    def create
+      @localisation = Localisation.new(localisation_params)
+      @localisation.user_id = current_user.id
+      if @localisation.save
+            redirect_to localisations_path
           else
-            render root_path, status: :unprocessable_entity
+            render localisations_path, status: :unprocessable_entity
           end
-      end
+    end
 
-      private
+    private
 
-      def set_localisation
+    def set_localisation
          @localisation = Localisation.find(params[:id])
-      end
+    end
 
-       def localisation_params
-          params.require(:localisation).permit(:coordinates, :user_id)
-       end
+    def localisation_params
+      params.require(:localisation).permit(:address, :user)
+    end
 end

@@ -1,29 +1,24 @@
-<div class="notification">
-  <% i = 0 %>
+
+ <div>
+ <%= render "form", localisation: @localisation %>
+ <% i = 0 %>
  <% @localisations.each do |localisation| %>
   <div class="notification-content">
-    <br>
     <p><small>
     <%= Time.now.strftime("%d/%m/%Y à %H:%M") %>
     </small></p>
     <p><%= localisation.address %></p>
-    <p><span style="color:#32065bd8;font-weight:bold;text-decoration:underline;">GPS:</span>
-      <%= " #{localisation.latitude.round(2)} / #{localisation.longitude.round(2)}" %>
-    </p>
-    <br>
       <div style="width: 30%; height: 150px;"
       data-controller="map"
       data-map-markers-value="<%= [@markers[i]].to_json %>"
       data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
       </div>
-    <br>
 
     <div class="notification-actions">
       <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
       <a href="#">Delete <i class="far fa-trash-alt"></i></a>
     </div>
-    <br>
   </div>
   <% i += 1 %>
   <% end %>
-</div>
+ </div>
