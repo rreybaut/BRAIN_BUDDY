@@ -3,11 +3,14 @@
   <div class="list_record">
     <h2 class="subtitle">Créez une liste</h2>
     <br>
+      <div class="AnimatedBox">
+        <h1>test de form</h1>
+      </div>
       <div class="form-list">
         <%= simple_form_for (@list) do |f| %>
-        <h5>Titre :</h5>
+        <h5>TITRE</h5>
         <%= f.input :title, label:false %>
-        <%= f.button :submit, 'Créer', class: 'btn btn-success' %>
+        <%= f.button :submit, 'CRÉER', class: 'btn btn-success' %>
       <% end %>
     </div>
     <br>
