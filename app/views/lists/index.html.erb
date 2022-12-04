@@ -5,7 +5,7 @@
     <br>
       <div class="form-list">
         <%= simple_form_for (@list) do |f| %>
-        <h5>Titre de la liste :</h5>
+        <h5>Titre :</h5>
         <%= f.input :title, label:false %>
         <%= f.button :submit, 'Créer', class: 'btn btn-success' %>
       <% end %>
