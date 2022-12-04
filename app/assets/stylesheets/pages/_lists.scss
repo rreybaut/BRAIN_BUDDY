@@ -5,38 +5,23 @@ body {
   font-family: 'Roboto Bold', sans-serif;
 }
 .listpage {
+  height: 90vh;
   position: relative;
 
-  .rotate-title {
-    position: absolute;
-    top: -38px;
-    left: 75px;
-    transform: rotate(-15deg);
-    color: $fushia;
-    font-weight: 500;
-    font-size: 40px;
-    transform: rotate(-15deg);
+  .list_record {
+    position: relative;
+    top: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
   }
-
-  .title {
-    margin: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 38px;
-    text-align: center;
-  }
-
   .subtitle {
     margin: auto;
     color: $verttitle;
     font-weight: 50;
     font-size: 24px;
     text-align: center;
-  }
-  .flexbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .messages {
     margin: auto;
@@ -60,16 +45,6 @@ body {
       color: #008f8c;
     }
   }
-
-  .logos-container-lists {
-    display: flex;
-    position: absolute;
-    bottom: 70px;
-    .lists-logo {
-      width: 190px;
-      object-fit: cover;
-    }
-  }
   .scroller {
     width: 500px;
     height: 300px;
@@ -77,21 +52,17 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
-}
+// }
 
-  /* Medium devices */
+//   /* Medium devices */
 
-@media (max-width: 1400px) {
-  .listpage {
-    // flex-direction: column;
-    height: 100vh;
-  }
-}
-
-  //   .logos-container {
-  //   height: 50%;
-  //   }
-  // }
-.far {
-  color: white
+// @media (max-width: 1400px) {
+//   .listpage {
+//     // flex-direction: column;
+//     height: 100vh;
+//   }
+// }
+// .far {
+//   color: white
+// }
 }
