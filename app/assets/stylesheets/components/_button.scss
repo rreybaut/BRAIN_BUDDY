@@ -11,6 +11,7 @@
   padding: 12px;
   width: 200px;
   font-weight: bolder;
+  --bs-btn-active-border-color: $fushia;
 }
 .btn {
   font-size: 20px;
@@ -23,6 +24,20 @@
   color: $gray;
   text-decoration: none;
   a:hover {
-    color: black;
+  color: black;
   }
+}
+.btn-form {
+  background-color: $aqua;
+  padding: 0 6px;
+  font-family: roboto condensed;
+  font-size: 16px;
+}
+.btn-delete {
+  background-color: $aqua;
+  font-family: roboto condensed;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: $fushia;
 }

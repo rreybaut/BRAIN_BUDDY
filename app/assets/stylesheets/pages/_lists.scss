@@ -30,13 +30,26 @@ body {
     font-size: 24px;
     text-align: center;
   }
+  .ita-msg {
+    color: $gray;
+    font-family: roboto light;
+    font-size: 0.9em;
+  }
   .obj-list {
     z-index: 5;
     position: relative;
     padding: 12px;
     background-color: $darkgray;
     border-radius: 6px;
-    border: solid aqua 1px;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+  .obj-flex {
+    gap: 4px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
   }
   // .form-list{
   //   .btn-success{
