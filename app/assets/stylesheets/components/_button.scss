@@ -13,10 +13,10 @@
   font-weight: bolder;
   --bs-btn-active-border-color: $fushia;
 }
-.btn {
-  font-size: 20px;
-  font-family: roboto condensed;
-}
+// .btn {
+//   font-size: 20px;
+//   font-family: roboto condensed;
+// }
 .btn-login {
   top: 36px;
   right: 8px;
@@ -40,4 +40,8 @@
 }
 .btn:hover {
   background-color: $fushia;
+}
+#btn-new_user {
+  width: max-content;
+  padding: 0 12px;
 }

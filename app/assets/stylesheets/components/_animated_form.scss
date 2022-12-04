@@ -1,7 +1,10 @@
+
 .AnimatedBox {
+  width: 360px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 	position: relative;
-	width: 120%;
-	height: 25vh;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
@@ -12,8 +15,8 @@
 	position: absolute;
 	top: -50%;
 	left: -50%;
-	width: 120%;
-	height: 25vh;
+	width: 360px;
+	height: 400px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
 	animation: animate 6s linear infinite;
@@ -24,8 +27,8 @@
 	position: absolute;
 	top: -50%;
 	left: -50%;
-	width: 120%;
-	height: 25vh;
+	width: 360px;
+	height: 400px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
 	animation: animate 6s linear infinite;
@@ -42,17 +45,16 @@
 	}
 }
 form {
-	position: absolute;
-  // inset: 2px;
-  background: $darkgray;
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 20px;
   border-radius: 8px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-h5 {
+.hStyle {
 	color: #45f3ff;
   font-family: roboto condensed;
   text-align: center;
@@ -151,8 +153,17 @@ input[type="submit"]:active {
   border-radius: 8px;
   border: 1px solid #000000;
 }
-.new_list {
-  position: relative;
-  width: 300px;
-  height: 180px;
-}
+// //Simple_form
+// #new_user {
+//   height: 360px;
+//   width: 359px;
+//   top: 160px;
+//   left: 5px;
+// }
+// #new-user a {
+//   text-decoration: none;
+//   color: $darkgray;
+// }
+// #new-user a:hover {
+//   color: $black;
+// }
