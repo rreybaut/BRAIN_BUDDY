@@ -122,6 +122,15 @@
 		transform: rotate(360deg);
 	}
 }
+#form_nft {
+  height: 365px;
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
+}
 //login form
 #form_login {
   height: 365px;

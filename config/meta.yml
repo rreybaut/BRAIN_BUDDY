@@ -1,5 +1,5 @@
 meta_name: "Brain Buddy"
-meta_title: "ton pote cérébral"
+meta_title: "Brain Buddy, ton pote cérébral"
 meta_description: "Aide-mémoire à commandes vocales, enregistrer des messages audio, créer des listes de tâches et partager, enregistrer une position gps, bouton d'appel d'urgence"
 meta_image: "bb_facebook_opengraph.jpg" # should exist in `app/assets/images/`
 twitter_account: "@MdqPon" # required for Twitter Cards
