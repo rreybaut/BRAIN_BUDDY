@@ -1,12 +1,11 @@
 class ListelementsController < ApplicationController
   def index
     @list = List.find(params[:list_id])
-    @Listelements = Listelement.all
+    @listelements = Listelement.all
     @listelement = Listelement.new
   end
 
   def new
-
     @listelement = Listelement.new
   end
 
@@ -33,25 +32,3 @@ class ListelementsController < ApplicationController
     params.require(:listelement).permit(:content)
   end
 end
-
-  # def check(current_user)
-  #   list_my_undelivered_orders(current_user)
-  #   index = @orders_view.ask_user_for_index
-  #   my_orders = @order_repo.my_undelivered_orders(current_user)
-  #   order = my_orders[index]
-  #   @order_repo.mark_as_delivered(order)
-  # end
-
-  # private
-
-  # def select_meal
-  #   meals = @meal_repo.all
-  #   @meals_view.display(meals)
-  #   index = @orders_view.ask_user_for_index
-  #   return meals[index]
-  # end
-
-  # def list_my_undelivered_orders(user)
-  #   orders = @order_repo.my_undelivered_orders(user)
-  #   @orders_view.display(orders)
-  # end

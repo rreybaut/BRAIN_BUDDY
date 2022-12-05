@@ -5,31 +5,18 @@ body {
   font-family: 'Roboto Bold', sans-serif;
 }
 .vocalpage {
+  z-index: 0;
+  height: 90vh;
   position: relative;
 
   .sound_record {
+    position: relative;
+    top: -110px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
   }
-
-  .rotate-title {
-    position: absolute;
-    top: -38px;
-    left: 75px;
-    transform: rotate(-15deg);
-    color: $fushia;
-    font-weight: 500;
-    font-size: 40px;
-    transform: rotate(-15deg);
-  }
-
-  .title {
-    margin: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 38px;
-    text-align: center;
-  }
-
   .subtitle {
     margin: auto;
     color: $verttitle;
@@ -54,25 +41,8 @@ body {
     flex-wrap: wrap;
     width: 50%;
     margin: auto;
-    .btn-success{
-      margin-top: 36px;
-      width: 200px;
-      height: 42px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #008f8c;
-    }
   }
 
-  .logos-container-vocals {
-    display: flex;
-    position: absolute;
-    bottom: 70px;
-    .vocals-logo {
-      width: 190px;
-      object-fit: cover;
-    }
-  }
   .scroller {
     width: 500px;
     height: 300px;
@@ -81,20 +51,13 @@ body {
     scrollbar-width: thin;
   }
 }
-
-  /* Medium devices */
-
-@media (max-width: 1400px) {
-  .vocalpage {
-    // flex-direction: column;
-    height: 100vh;
-  }
-}
-
-  //   .logos-container {
-  //   height: 50%;
-  //   }
-  // }
-.far {
-  color: white
-}
+//   /* Medium devices */
+// @media (max-width: 1400px) {
+//   .vocalpage {
+//     width: 100vw;
+//     height: 100vh;
+//   }
+// }
+// .far {
+//   color: white
+// }

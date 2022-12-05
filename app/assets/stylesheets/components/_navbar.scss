@@ -14,3 +14,29 @@
 .container-fluid {
   flex-direction: row-reverse;
 }
+
+.navbar-nav{
+  .dropdown-menu {
+    position: absolute;
+    font-family: Roboto condensed;
+    font-size: 1.2em;
+    text-align: right;
+    padding: 0.4em 1em;
+    z-index: 1;
+    border-radius: 6px;
+    border: none;
+    background: white;
+    top: 1em;
+    box-shadow: #00000042 3px 6px 18px 3px;  }
+}
+
+// @media (max-width: 700px) {
+//   .dropdown {
+//     margin: 14px 6px 0 0;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//   }
+// }
+// @media (max-width: 1400px) {
+// }
