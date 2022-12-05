@@ -56,16 +56,7 @@ body {
     align-items: flex-start;
     flex-direction: column;
   }
-  // .form-list{
-  //   .btn-success{
-  //     margin-top: 36px;
-  //     width: 200px;
-  //     height: 42px;
-  //     font-size: 16px;
-  //     font-weight: bold;
-  //     color: #008f8c;
-  //   }
-  // }
+
   .scroller {
     width: 500px;
     height: 300px;
@@ -73,17 +64,8 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
-// }
 
-//   /* Medium devices */
-
-// @media (max-width: 1400px) {
-//   .listpage {
-//     // flex-direction: column;
-//     height: 100vh;
-//   }
-// }
-// .far {
-//   color: white
-// }
+  .list_checked {
+    text-decoration: line-through;
+  }
 }

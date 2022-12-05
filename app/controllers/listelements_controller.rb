@@ -20,8 +20,22 @@ class ListelementsController < ApplicationController
     end
   end
 
+  def update
+    @listelement = Listelement.find(params[:id])
+    if @listelement.check
+      @listelement.check = !@listelement.check
+    else
+      @listelement.check = true
+    end
+    if @listelement.save
+      redirect_to list_path
+    else
+      redirect_to list_path, status: :unprocessable_entity
+    end
+  end
+
   def destroy
-    @listelement = listelement.find(params[:id])
+    @listelement = Listelement.find(params[:id])
     @listelement.destroy
     redirect_to list_path(@listelement.list)
   end
