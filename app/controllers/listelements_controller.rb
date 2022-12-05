@@ -11,7 +11,7 @@ class ListelementsController < ApplicationController
 
   def create
     @list = List.find(params[:list_id])
-    @listelement = Listelement.new(listelement_params[:list_id])
+    @listelement = Listelement.new(listelement_params)
     @listelement.list = @list
     if @listelement.save
       redirect_to lists_path(@list)
