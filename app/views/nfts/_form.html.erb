@@ -1,9 +1,14 @@
+<div>
+<h1>Ouvre votre sprit</h1>
 <div class="container">
   <h3>Details :</h3>
-  <%= simple_form_for nft  do |f| %>
-    <br>
-    <%= f.input :photo, as: :file %>
 
-    <span><%= f.submit %></span>
-      <% end %>
+  <%= simple_form_for nft  do |f| %>
+  <br>
+  <%= f.input :photo, as: :file %>
+  <span><%= f.submit %></span>
+  <% end %>
+</div>
+<br>
+<%= link_to "Back to index", nfts_path %>
 </div>
