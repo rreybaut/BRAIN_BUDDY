@@ -39,6 +39,43 @@
   display: flex;
   justify-content: center;
 }
+
+//nft form
+.AnimatedBox_nft {
+  width: 360px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.AnimatedBox_nft::before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 360px;
+  height: 210px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+  animation: animate 6s linear infinite;
+}
+.AnimatedBox_nft::after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 360px;
+  height: 210px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
 //login form
 .AnimatedBox_login {
   width: 360px;
@@ -123,7 +160,7 @@
 	}
 }
 #form_nft {
-  height: 365px;
+  height: 210px;
   position: absolute;
   inset: 2px;
   background: #28292d;
