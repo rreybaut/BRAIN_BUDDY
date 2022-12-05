@@ -38,19 +38,23 @@ body {
   }
   .obj-list {
     z-index: 5;
-    position: relative;
+    position: absolute;
     padding: 12px;
-    background-color: $darkgray;
-    border-radius: 6px;
+    background-color: #fffba3;
     gap: 4px;
     display: flex;
     flex-direction: column;
+    height: 190px;
+    width: 190px;
+    left: 145px;
+    top: 164px;
+    transform: rotate(6deg);
+    box-shadow: #0000008c 8px 4px 10px 0px;
   }
   .obj-flex {
-    gap: 4px;
     display: flex;
-    align-items: baseline;
-    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
   }
   // .form-list{
   //   .btn-success{

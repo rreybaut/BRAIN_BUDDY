@@ -13,10 +13,6 @@
   font-weight: bolder;
   --bs-btn-active-border-color: $fushia;
 }
-// .btn {
-//   font-size: 20px;
-//   font-family: roboto condensed;
-// }
 .btn-login {
   top: 36px;
   right: 8px;
@@ -28,13 +24,16 @@
   }
 }
 .btn-form {
-  background-color: $aqua;
+  color: $post-it;
+  background-color: $darkgray;
   padding: 0 6px;
   font-family: roboto condensed;
   font-size: 16px;
 }
 .btn-delete {
-  background-color: $aqua;
+  color: $post-it;
+  background-color: $darkgray;
+  padding: 0 6px;
   font-family: roboto condensed;
   font-size: 16px;
 }
@@ -42,6 +41,9 @@
   background-color: $fushia;
 }
 #btn-new_user {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: roboto condensed;
   width: max-content;
   padding: 0 12px;
 }

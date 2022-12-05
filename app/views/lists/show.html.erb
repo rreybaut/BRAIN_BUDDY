@@ -1,6 +1,6 @@
 <div class="container">
   <h5><%= "#{@list.title}" %></h5>
-  <em class="ita-msg"><%= "(créé le #{@list.created_at}) :" %></em>
+  <em class="ita-msg"><%= "(créé le #{@list.date}) :" %></em>
   <p><%= "#{@listelement.content}" %></p>
 
   <%= render "shared/form_listselements" %>

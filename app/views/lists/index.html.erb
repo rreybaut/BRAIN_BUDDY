@@ -2,24 +2,20 @@
   <%= render "shared/logo" %>
   <div class="list_record">
     <h2 class="subtitle">Créez une liste</h2>
-    <br>
-
-      <div class="AnimatedBox">
-        <div class="form">
-          <%= simple_form_for (@list) do |f| %>
-            <h5 class="hStyle">TITRE</h5>
-            <%= f.input :title, label:false %>
-            <%= f.button :submit, 'CRÉER', class: 'btn-form' %>
-          <% end %>
-        </div>
+    <div class="AnimatedBox">
+      <div class="form">
+        <%= simple_form_for (@list) do |f| %>
+          <h5 class="hStyle">TITRE</h5>
+          <%= f.input :title, label:false %>
+          <%= f.button :submit, 'Créer', class: 'btn-new_user' %>
+        <% end %>
       </div>
+    </div>
     <br>
-    <h2 class="subtitle">Vos message vocaux</h2>
     <div class="form-list">
       <%= render "shared/obj-list" %>
     </div>
   </div>
-  <br>
   <div class="logos-container">
     <div class="logos">
       <%= image_tag "bb_micro.png", class: "A" %>

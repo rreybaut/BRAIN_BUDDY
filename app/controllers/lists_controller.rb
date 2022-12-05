@@ -5,10 +5,8 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-
   def new
     @list = List.new
-
   end
 
   def create
