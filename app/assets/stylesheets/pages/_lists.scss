@@ -23,6 +23,7 @@ body {
     font-weight: 50;
     font-size: 24px;
     text-align: center;
+    font-family: roboto condensed;
   }
   .messages {
     margin: auto;
@@ -36,7 +37,7 @@ body {
     font-family: roboto light;
     font-size: 0.9em;
   }
-  .obj-list {
+  .obj-postit {
     z-index: 5;
     position: absolute;
     padding: 12px;
@@ -44,19 +45,13 @@ body {
     gap: 4px;
     display: flex;
     flex-direction: column;
-    height: 190px;
+    height: 218px;
     width: 190px;
     left: 145px;
-    top: 164px;
+    top: 152px;
     transform: rotate(6deg);
     box-shadow: #0000008c 8px 4px 10px 0px;
   }
-  .obj-flex {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .scroller {
     width: 500px;
     height: 300px;
@@ -64,8 +59,43 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
-
   .list_checked {
     text-decoration: line-through;
+    a {
+      color: $black;
+    }
+  }
+  .list_unchecked {
+    text-decoration: none;
+    a {
+      color: $black;
+    }
+  }
+  .obj-flex {
+    opacity: 0.85;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    h5 {
+      font-family: roboto;
+      font-size: 1.4em;
+    }
+    ul {
+      padding-left: 12px;
+    }
+    li {
+      font-size: 1.1em;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .edit_del-btn {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 4px;
+    left: 104px;
   }
 }
