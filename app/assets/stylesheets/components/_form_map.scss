@@ -48,7 +48,12 @@
   background: #28292d;
   /* padding: 20px; */
   /* border-radius: 8px; */
-  /* z-index: 2; */
   display: flex;
   flex-direction: column;
+  z-index: 4;
+  top: 90px;
+  position: relative;
+}
+.address_search {
+  width: 300px;
 }

@@ -3,8 +3,8 @@
   <div class="create-address-container">
     <div id="new_local">
       <%= simple_form_for @localisation do |f| %>
-        <%= f.text_field :address, placeholder: "1 Promenade des anglais, Nice", class:"input-create-address" %>
-        <%= f.submit "Localiser", class:"submit-create-map" %>
+        <%= f.text_field :address, placeholder: "Votre adresse…", class:"form-control address_search" %>
+        <%= f.submit "Localiser", class:"btn btn-new_user" %>
       <% end %>
     </div>
   </div>
@@ -12,7 +12,7 @@
   <div class="map-address">
     <form action="/localisations" id="form_local">
       <select name="yours" id="address-select" >
-        <option>-- Vos adresses --</option>
+        <option>Vos adresses</option>
         <% @localisations.each_with_index do |localisation, index| %>
           <option value=<%= index %>>
             <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
@@ -28,9 +28,6 @@
         data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
       </div>
     </div>
-
-  <a href="#">
-  <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
 
 </div>
 
