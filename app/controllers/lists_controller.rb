@@ -3,12 +3,10 @@ class ListsController < ApplicationController
   def index
     @lists = List.all
     @list = List.new
-
   end
 
   def new
     @list = List.new
-
   end
 
   def create
@@ -16,13 +14,15 @@ class ListsController < ApplicationController
     @list.user = current_user
 
     if @list.save
-      redirect_to lists_path
+      redirect_to list_path(@list)
     else
       render :index, status: :unprocessable_entity
     end
   end
 
   def show
+    @list = List.find(params[:id])
+    @listelement = Listelement.new
   end
 
   def edit
@@ -36,8 +36,8 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list = List.find(params[:id])
-    @list.destroy
+    @lists = List.find(params[:id])
+    @lists.destroy
     redirect_to lists_path, status: :see_other
   end
 

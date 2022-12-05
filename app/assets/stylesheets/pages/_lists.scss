@@ -4,18 +4,18 @@ body {
   background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
   font-family: 'Roboto Bold', sans-serif;
 }
-.vocalpage {
-  z-index: 0;
+.listpage {
+  z-index: 1;
   height: 90vh;
   position: relative;
 
-  .sound_record {
+  .list_record {
     position: relative;
-    top: -110px;
+    top: -90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 8px;
   }
   .subtitle {
     margin: auto;
@@ -24,10 +24,6 @@ body {
     font-size: 24px;
     text-align: center;
   }
-  .flexbox {
-    display: flex;
-    justify-content: space-evenly;
-  }
   .messages {
     margin: auto;
     color: $verttitle;
@@ -35,12 +31,30 @@ body {
     font-size: 24px;
     text-align: center;
   }
-  .form-vocal{
+  .ita-msg {
+    color: $gray;
+    font-family: roboto light;
+    font-size: 0.9em;
+  }
+  .obj-list {
+    z-index: 5;
+    position: absolute;
+    padding: 12px;
+    background-color: #fffba3;
+    gap: 4px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 50%;
-    margin: auto;
+    flex-direction: column;
+    height: 190px;
+    width: 190px;
+    left: 145px;
+    top: 164px;
+    transform: rotate(6deg);
+    box-shadow: #0000008c 8px 4px 10px 0px;
+  }
+  .obj-flex {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .scroller {
@@ -50,14 +64,8 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
+
+  .list_checked {
+    text-decoration: line-through;
+  }
 }
-//   /* Medium devices */
-// @media (max-width: 1400px) {
-//   .vocalpage {
-//     width: 100vw;
-//     height: 100vh;
-//   }
-// }
-// .far {
-//   color: white
-// }

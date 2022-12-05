@@ -1,32 +1,16 @@
 <div class="vocalpage">
-  <h1 class="rotate-title"><strong>Brain</strong></h1>
-  <h1 class="title">Buddy</h1>
-  <h2 class="subtitle">Message Vocal</h2>
-  <div class="flexbox">
-      <%= simple_form_for (@vocal) do |f| %>
-        <%= f.label "Titre" %>
-        <%= f.input :name, label: false %>
-
-        <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
-      <% end %>
-  </div>
-    <br>
-    <h1 class="messages">Messages</h1>
-  <div class="form-vocal">
-    <div class="scroller">
-      <% @vocals.each do |vocal| %>
-        <div class="msg">
-          <h5><%= "#{vocal.name}" %></h5>
-          <em class="ita-msg"><%= "(créé le #{vocal.created_at}) :" %></em>
-          <p><%= "#{vocal.audio}" %></p>
-          <%= link_to "", vocal_path(vocal), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "far fa-trash-alt" %>
-        </div>
-        <br>
-        <% end %>
-    </div>
+  <%= render "shared/logo" %>
+  <br>
+  <div class="sound_record">
+    <button id="startRecordingButton" class="btn btn-success">Start recording</button>
+    <button id="stopRecordingButton" class="btn btn-success">Stop recording</button>
+    <button id="playButton" class="btn btn-success">Play</button>
+    <button id="downloadButton" class="btn btn-success">Download</button>
   </div>
   <div class="logos-container">
-      <%= image_tag "bb_micro.png", class: "homepage-logo" %>
-      <%= image_tag "bb_loupe.png", class: "homepage-logo" %>
+    <div class="logos">
+      <%= image_tag "bb_micro.png", class: "A" %>
+      <%= image_tag "bb_loupe.png", class: "logos B" %>
+    </div>
   </div>
 </div>

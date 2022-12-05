@@ -4,63 +4,16 @@ body {
   background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
   font-family: 'Roboto Bold', sans-serif;
 }
-
-  .homepage {
-    height: 100vh;
+.homepage {
+  height: 90vh;
+  position: relative;
+  .links-homepage {
     position: relative;
-
-    .rotate-title {
-      position: absolute;
-      top: -38px;
-      left: 75px;
-      transform: rotate(-15deg);
-      color: $fushia;
-      font-weight: 500;
-      font-size: 40px;
-      transform: rotate(-15deg);
-    }
-
-    .title {
-      margin: auto;
-      color: white;
-      font-weight: bold;
-      font-size: 38px;
-      text-align: center;
-
-    }
-    .links-homepage {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 50%;
-      margin: auto;
-      .btn{
-        margin-top: 36px;
-        width: 200px;
-        height: 42px;
-        font-size: 16px;
-        font-weight: bold;
-      }
-    }
-    .logos-container {
-      display: flex;
-      position: absolute;
-      bottom: 70px;
-      .homepage-logo {
-        width: 190px;
-        object-fit: cover;
-      }
-    }
+    top: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6em;
+    justify-content: center;
   }
-
-  /* Medium devices */
-
-// @media (max-width: 768px) {
-//   .homepage {
-//     flex-direction: column;
-//     height: auto;
-//   }
-//   .logos-container {
-//     height: 50px;
-//   }
-// }
+}

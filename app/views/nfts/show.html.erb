@@ -1,0 +1,6 @@
+<%= link_to "Back to index", nfts_path, class: "btn btn-primary" %>
+  <div>
+      <%= image_tag @nft.photo, height: 350, width: 450, crop: :fill, class: "image" %>
+  </div>
+  <br>
+  <%= link_to "Delete", nft_path(@nft),data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"},class: "btn btn-danger" %>

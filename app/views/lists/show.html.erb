@@ -1,0 +1,13 @@
+<div class="container">
+  <h5><%= "#{@list.title}" %></h5>
+  <em class="ita-msg"><%= "(créé le #{@list.date}) :" %></em>
+  <p><%= "#{@listelement.content}" %></p>
+
+  <%= render "shared/form_listselements" %>
+</div>
+<div class="logos-container">
+    <div class="logos">
+      <%= image_tag "bb_micro.png", class: "A" %>
+      <%= image_tag "bb_halteres.png", class: "logos B" %>
+    </div>
+  </div>
