@@ -23,6 +23,7 @@ body {
     font-weight: 50;
     font-size: 24px;
     text-align: center;
+    font-family: roboto condensed;
   }
   .messages {
     margin: auto;
@@ -51,12 +52,6 @@ body {
     transform: rotate(6deg);
     box-shadow: #0000008c 8px 4px 10px 0px;
   }
-  .obj-flex {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .scroller {
     width: 500px;
     height: 300px;
@@ -64,8 +59,35 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
-
   .list_checked {
     text-decoration: line-through;
+    a {
+      color: $black;
+    }
+  }
+  .obj-flex {
+    opacity: 0.85;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    h5 {
+      font-family: roboto;
+      font-size: 1.4em;
+    }
+    ul {
+      padding-left: 12px;
+    }
+    li {
+      font-size: 1.1em;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .edit_del-btn {
+    display: flex;
+    gap: 4px;
+    width: 100%;
   }
 }

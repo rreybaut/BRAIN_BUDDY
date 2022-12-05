@@ -9,13 +9,12 @@
         <% end %>
       <% end %>
       </ul>
-      <%# <p><i class="fa-regular fa-square-check"></i> Salade roquette</p>
-      <p><i class="fa-regular fa-square-check"></i> Pack de bières</p>
-      <p><i class="fa-regular fa-square-check"></i> Gorgonzola</p> %>
-      <%= link_to "éditer", list_path(list), class: "btn btn-form" %>
+      <div class="edit_del-btn">
+        <%= link_to "éditer", list_path(list), class: "btn btn-form" %>
         <%= link_to list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class:'btn btn-form' do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
+      </div>
     </div>
   </div>
 <% end %>
