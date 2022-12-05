@@ -24,26 +24,22 @@
   <br>
   <ul class="cards-index">
     <% @nfts.each do |nft|  %>
-      <% if nft == "" %>
-        <%= image_tag "dalmatian.jpg" %>
-      <% end %>
+
     <li>
-      <%= link_to ntf_path(nft) do %>
+      <%= link_to nft_path(nft) do %>
         <div class="card-trip">
-          <%= image_tag image %>
-            <div class="card-trip-infos">
-              <h2><%= nft %>
-              <% end %>
-            </div>
+          <%= image_tag nft.photo, width: "200px", height: "auto", class: "nft-photo" %>
         </div>
+      <% end %>
     </li>
   <% end  %>
   </ul>
   <div class="container new-container">
   <h1>Ouvre your sprit</h1>
- <%= link_to "Create an Nft", nfts_path, class: "btn btn-flat" %>
 
-  <%= render "form", nft: @nft %>
+  <div id="form_nft">
+    <%= render "form", nft: @nft %>
+  </div>
 
 </div>
 

@@ -19,6 +19,7 @@ class NftsController < ApplicationController
     @nft.nft = @nft
     @nft.user = current_user
     if @nft.save
+
       redirect_to nfts_path(@nft)
     else
       render :index, status: :unprocessable_entity
@@ -37,7 +38,7 @@ class NftsController < ApplicationController
 
   def destroy
     # @nfts= Nft.find(params[:id])
-    @nfts.destroy
+    @nft.destroy
     redirect_to nfts_path, status: :see_other
   end
 
@@ -48,6 +49,6 @@ class NftsController < ApplicationController
   end
 
   def nft_params
-    params.require(:nft).permit(:photo, :user_id, :name )
+    params.require(:id).permit(:photo, :user_id, :name )
   end
 end
