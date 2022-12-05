@@ -5,6 +5,11 @@ class LocalisationsController < ApplicationController
     def index
       @localisation = Localisation.new
 
+      if params[:index]
+        @index = params[:index].to_i
+      else
+        @index = 0
+      end
       if current_user
         @localisations = Localisation.where(user_id: current_user.id)
       else

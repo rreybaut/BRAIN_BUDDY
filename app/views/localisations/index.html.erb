@@ -1,24 +1,52 @@
-
- <div>
- <%= render "form", localisation: @localisation %>
- <% i = 0 %>
- <% @localisations.each do |localisation| %>
-  <div class="notification-content">
-    <p><small>
-    <%= Time.now.strftime("%d/%m/%Y à %H:%M") %>
-    </small></p>
-    <p><%= localisation.address %></p>
-      <div style="width: 30%; height: 150px;"
-      data-controller="map"
-      data-map-markers-value="<%= [@markers[i]].to_json %>"
-      data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
-      </div>
-
-    <div class="notification-actions">
-      <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
-      <a href="#">Delete <i class="far fa-trash-alt"></i></a>
-    </div>
-  </div>
-  <% i += 1 %>
+<div class="homepage">
+  <h1 class="rotate-title"><strong>Brain</strong></h1>
+  <h1 class="title">Buddy</h1>
+  <h2 class="map-title">Localiser une adresse<h2>
+  <br>
+  <div class="create-address-container">
+  <%= form_for @localisation do |f| %>
+   <%= f.text_field :address, placeholder: "1 Promenade des anglais, Nice", class:"input-create-address" %>
+   <%= f.submit "Localiser", class:"submit-create-map" %>
   <% end %>
+  <br>
+</div>
+<br>
+
+  <div class="map-address">
+  <form action="/localisations">
+    <select name="yours" id="address-select" >
+      <option>-- Vos adresses --</option>
+      <% @localisations.each_with_index do |localisation, index| %>
+      <option value=<%= index %>>
+      <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
+      </option>
+    <% end %>
+   </select>
+  </form>
+  <br>
+    <div class="mapbox-container">
+    <br>
+    <div style="width: 80%; height: 250px;"
+      data-controller="map"
+      data-map-markers-value="<%= [@markers[@index]].to_json %>"
+      data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
+    </div>
  </div>
+    <br>
+    <a href="#">
+    <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
+    <br>
+    <br>
+
+ </div>
+</div>
+
+<script>
+var selectElmt = document.getElementById("address-select");
+selectElmt.addEventListener('change', (e) => {
+  var valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+  console.log(valeurselectionnee);
+  window.location.assign(`/localisations?index=${valeurselectionnee}`)
+})
+var textselectionne = selectElmt.options[selectElmt.selectedIndex].text;
+</script>

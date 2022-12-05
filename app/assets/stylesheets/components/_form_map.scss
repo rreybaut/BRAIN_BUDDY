@@ -1,0 +1,38 @@
+.create-address-container{
+  display: flex;
+  justify-content:center;
+  .input-create-address {
+    width: 250px;
+    background-color: #c1f2df;
+    font-style: italic;
+    font-size: 20px;
+    opacity: 0.6;
+  }
+  .submit-create-map{
+    background: none;
+    border: none;
+    font-weight: bold;
+  }
+}
+
+.map_address{
+  display: flex;
+  justify-content:center;
+}
+
+.map-title{
+  margin: auto;
+  color: #27EB9D;
+  font-weight: 50;
+  font-size: 24px;
+  text-align: center;
+}
+
+#address-select{
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 2px 5px;
+}

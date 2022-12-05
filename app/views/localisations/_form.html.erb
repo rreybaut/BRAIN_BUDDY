@@ -1,6 +1,6 @@
-<div class="container">
+<div class="create-address-container">
   <%= simple_form_for localisation do |f| %>
-   <%= f.input :address, label: false %>
+   <%= f.input :address, label: false, placeholder: "1 Promenade des anglais, Nice", class:"input-create-address" %>
    <%= f.submit %>
   <% end %>
 </div>
