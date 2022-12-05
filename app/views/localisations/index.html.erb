@@ -8,54 +8,45 @@
    <%= f.text_field :address, placeholder: "1 Promenade des anglais, Nice", class:"input-create-address" %>
    <%= f.submit "Localiser", class:"submit-create-map" %>
   <% end %>
+  <br>
 </div>
+<br>
 
-  <% i=0 %>
- <div class="mapbox-container">
- <br>
-  <div style="width: 100%; height: 150px;"
-      data-controller="map"
-      data-map-markers-value="<%= [@markers[i]].to_json %>"
-      data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
-   </div>
- </div>
-
-  <div class="maps-address">
-    <br>
-    <a href="#"><i class="far fa-trash-alt"></i></a>
-    <br>
-
-    <select name="Vos adresses enregistrées" id="adr-select" onChange="selectedAddress(this)">
-      <option>--Please choose an option--</option>
+  <div class="map-address">
+  <form action="/localisations">
+    <select name="yours" id="address-select" >
+      <option>-- Vos adresses --</option>
       <% @localisations.each_with_index do |localisation, index| %>
-      <option id="adresse-<%= index %>" data-index="<%= index %>" value="<%= localisation.address %>" data-localisation="<%= localisation %>">
-
+      <option value=<%= index %>>
       <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
-      <% i=index %>
       </option>
-      <% end %>
-    </select>
-
+    <% end %>
+   </select>
+  </form>
+  <br>
     <div class="mapbox-container">
     <br>
-    <div style="width: 100%; height: 150px;"
+    <div style="width: 80%; height: 250px;"
       data-controller="map"
-      data-map-markers-value="<%= [@markers[i]].to_json %>"
+      data-map-markers-value="<%= [@markers[@index]].to_json %>"
       data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
     </div>
  </div>
-
+    <br>
+    <a href="#">
+    <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
+    <br>
+    <br>
 
  </div>
-
-
-
 </div>
 
 <script>
-function selectedAddress(sel) {
-  #console.log( nodes.indexOf( sel ) );
-  #console.log(sel.options[sel.selectedIndex]);
-  #console.log(document.getElementbyId("").dataset)
-}
- </script>
+var selectElmt = document.getElementById("address-select");
+selectElmt.addEventListener('change', (e) => {
+  var valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+  console.log(valeurselectionnee);
+  window.location.assign(`/localisations?index=${valeurselectionnee}`)
+})
+var textselectionne = selectElmt.options[selectElmt.selectedIndex].text;
+</script>
