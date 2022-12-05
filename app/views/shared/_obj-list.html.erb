@@ -2,9 +2,16 @@
   <div class="obj-list">
     <div class="obj-flex">
       <h5><%= "#{list.title}" %></h5>
-      <p><i class="fa-regular fa-square-check"></i> Salade roquette</p>
+      <ul>
+      <% list.listelements.each do |task| %>
+        <% if task.content %>
+          <li class= <%= "list_checked" if task.check %> ><%= link_to task.content, list_listelement_path(id:task.id, list_id:list.id), data: {turbo_method:"patch"} %></li>
+        <% end %>
+      <% end %>
+      </ul>
+      <%# <p><i class="fa-regular fa-square-check"></i> Salade roquette</p>
       <p><i class="fa-regular fa-square-check"></i> Pack de bières</p>
-      <p><i class="fa-regular fa-square-check"></i> Gorgonzola</p>
+      <p><i class="fa-regular fa-square-check"></i> Gorgonzola</p> %>
       <%= link_to "éditer", list_path(list), class: "btn btn-form" %>
         <%= link_to list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class:'btn btn-form' do %>
           <i class="fa-regular fa-trash-can"></i>
