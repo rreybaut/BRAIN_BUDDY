@@ -1,4 +1,4 @@
-.create-address-container{
+.create-address-container {
   display: flex;
   justify-content:center;
   .input-create-address {
@@ -8,31 +8,47 @@
     font-size: 20px;
     opacity: 0.6;
   }
-  .submit-create-map{
+  .submit-create-map {
     background: none;
     border: none;
     font-weight: bold;
   }
 }
-
-.map_address{
+.map_address {
   display: flex;
   justify-content:center;
 }
-
-.map-title{
+.map-title {
   margin: auto;
   color: #27EB9D;
   font-weight: 50;
   font-size: 24px;
   text-align: center;
 }
-
-#address-select{
+#address-select {
   display: flex;
   justify-content: center;
   width: 250px;
   font-weight: normal;
   font-size: 20px;
   padding: 2px 5px;
+}
+#form_local {
+  position: absolute;
+  background: #28292d;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+#new_local {
+  position: absolute;
+  /* inset: 2px; */
+  background: #28292d;
+  /* padding: 20px; */
+  /* border-radius: 8px; */
+  /* z-index: 2; */
+  display: flex;
+  flex-direction: column;
 }

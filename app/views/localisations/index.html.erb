@@ -1,44 +1,37 @@
 <div class="homepage">
-  <h1 class="rotate-title"><strong>Brain</strong></h1>
-  <h1 class="title">Buddy</h1>
   <h2 class="map-title">Localiser une adresse<h2>
-  <br>
   <div class="create-address-container">
-  <%= form_for @localisation do |f| %>
-   <%= f.text_field :address, placeholder: "1 Promenade des anglais, Nice", class:"input-create-address" %>
-   <%= f.submit "Localiser", class:"submit-create-map" %>
-  <% end %>
-  <br>
-</div>
-<br>
+    <div id="new_local">
+      <%= simple_form_for @localisation do |f| %>
+        <%= f.text_field :address, placeholder: "1 Promenade des anglais, Nice", class:"input-create-address" %>
+        <%= f.submit "Localiser", class:"submit-create-map" %>
+      <% end %>
+    </div>
+  </div>
 
   <div class="map-address">
-  <form action="/localisations">
-    <select name="yours" id="address-select" >
-      <option>-- Vos adresses --</option>
-      <% @localisations.each_with_index do |localisation, index| %>
-      <option value=<%= index %>>
-      <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
-      </option>
-    <% end %>
-   </select>
-  </form>
-  <br>
-    <div class="mapbox-container">
-    <br>
-    <div style="width: 80%; height: 250px;"
-      data-controller="map"
-      data-map-markers-value="<%= [@markers[@index]].to_json %>"
-      data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
-    </div>
- </div>
-    <br>
-    <a href="#">
-    <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
-    <br>
-    <br>
+    <form action="/localisations" id="form_local">
+      <select name="yours" id="address-select" >
+        <option>-- Vos adresses --</option>
+        <% @localisations.each_with_index do |localisation, index| %>
+          <option value=<%= index %>>
+            <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
+          </option>
+        <% end %>
+      </select>
+    </form>
 
- </div>
+    <div class="mapbox-container">
+      <div style="width: 80%; height: 250px;"
+        data-controller="map"
+        data-map-markers-value="<%= [@markers[@index]].to_json %>"
+        data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
+      </div>
+    </div>
+
+  <a href="#">
+  <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
+
 </div>
 
 <script>
