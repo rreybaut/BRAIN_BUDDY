@@ -9,11 +9,20 @@ body {
   position: relative;
   .links-homepage {
     position: relative;
+    top: -70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+    justify-content: center;
+  }
+
+  .home_wrap {
+    position: relative;
     top: -90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.6em;
-    justify-content: center;
+    gap: 8px;
   }
 }

@@ -17,14 +17,7 @@ body {
     align-items: center;
     gap: 8px;
   }
-  .subtitle {
-    margin: auto;
-    color: $verttitle;
-    font-weight: 50;
-    font-size: 24px;
-    text-align: center;
-    font-family: roboto condensed;
-  }
+
   .create-address-container {
     display: flex;
     justify-content:center;
@@ -78,14 +71,5 @@ body {
     width: fit-content;
     height: fit-content;
     gap: 8px;
-  }
-  .edit_del-btn_loca {
-    z-index: 3;
-    right: 20px;
-    bottom: 178px;
-    position: absolute;
-    i {
-      font-size: 24px;
-    }
   }
 }

@@ -1,17 +1,19 @@
 .btn-warning {
   border-radius: 0 2em 0 2em;
-  color: white;
+  color: $white;
   width: 64px;
   height: 24px;
   padding: 0;
+  transition: ease .3s;
 }
 .btn-success {
   border-radius: 10em 1em 10em 1em;
-  color: white;
+  color: $white;
   padding: 12px;
   width: 200px;
   font-weight: bolder;
   --bs-btn-active-border-color: $fushia;
+  transition: ease .3s;
 }
 .btn-login {
   top: 36px;
@@ -19,8 +21,9 @@
   position: absolute;
   color: $gray;
   text-decoration: none;
+  transition: ease .3s;
   a:hover {
-  color: black;
+  color: $black;
   }
 }
 .btn-form {
@@ -29,6 +32,7 @@
   padding: 0 6px;
   font-family: roboto condensed;
   font-size: 16px;
+  transition: ease .3s;
 }
 .btn-delete {
   color: $post-it;
@@ -36,16 +40,18 @@
   padding: 0 6px;
   font-family: roboto condensed;
   font-size: 16px;
+  transition: ease .3s;
 }
 .btn:hover {
   background-color: $fushia;
 }
 #btn-new_user {
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 400;
   font-family: roboto condensed;
   width: max-content;
   padding: 0 12px;
+  transition: ease .3s;
 }
 .btn-localisation {
   border: none;
@@ -55,18 +61,64 @@
   font-weight: 600;
   width: 100px;
   margin-top: 4px;
-}
-.b-audio {
-  width: 120px;
-  color: white;
-  border-radius: 57px;
-  background: linear-gradient(#4a0070, #ff007a);
-  padding: 6px 0;
-  font-family: roboto condensed;
   transition: ease .3s;
 }
-.b-audio:hover {
-  font-size: larger;
+
+.b-brainbud {
+  border: solid 2px $white;
+  width: 160px;
+  color: $white;
+  border-radius: 50px;
+  background: linear-gradient(#4a0070, #ff007a);
+  font-size: 1.1em;
+  text-align: center;
+  height: 54px;
+  padding: 12px 0;
+  font-family: roboto condensed;
+  transition: ease .3s;
+  text-decoration: none;
+}
+.b-brainbud:hover {
+  font-size: 1.1em;
   color: $black;
   background: linear-gradient(#ff8400, #ffd500);
+  transition: ease .3s;
+}
+.b-brainbud a {
+  font-family: roboto condensed;
+  color: $white;
+  text-decoration: none;
+}
+.b-brainbud a:hover {
+  font-size: 1.1em;
+  color: $black;
+  transition: ease .3s;
+}
+
+.edit_del-btn_loca {
+  z-index: 3;
+  right: 20px;
+  bottom: 178px;
+  position: absolute;
+  transition: ease .3s;
+  i {
+    font-size: 24px;
+  }
+}
+.edit_del-btn_loca:hover {
+  background-color: $fushia;
+  transition: ease .3s;
+  i {
+    font-size: 24px;
+  }
+}
+#register-button {
+  color: $white;
+  width: fit-content;
+  border-radius: 6px;
+  background-color: $fushia;
+  transition: ease .3s;
+}
+#register-button:hover {
+  background-color: $black;
 }
