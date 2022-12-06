@@ -1,0 +1,8 @@
+
+<%= cl_image_tag @nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
+<br>
+<%= link_to "Nft", nfts_path(@nft),data: {turbo_method: :update},class: "btn btn-primary" %>
+<br>
+<%= link_to "Update", nfts_path(@nft),data: {turbo_method: :update},class: "btn btn-primary" %>
+<br>
+<%= link_to "Delete", nfts_path(@nft),data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"},class: "btn btn-danger" %>
