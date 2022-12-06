@@ -4,5 +4,10 @@ import "./controllers"
 import "bootstrap"
 import { soundRecord } from "./components/sound_record";
 soundRecord()
+<<<<<<< HEAD
 import { commandeVocal } from "./components/sound_record";
 commandeVocal()
+=======
+import { syntheseVocal } from "./components/synthese_vocal";
+syntheseVocal()
+>>>>>>> master
