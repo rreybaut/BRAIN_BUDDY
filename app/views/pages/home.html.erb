@@ -1,12 +1,24 @@
 <div class="homepage">
   <%= render "shared/logo" %>
-  <div class="links-homepage">
-    <%= link_to "Message Vocal", vocals_path, class: "btn btn-success" %>
-    <%= link_to "Créer une liste", lists_path, class: "btn btn-success" %>
-    <%= link_to "Position GPS", localisations_path, class: "btn btn-success" %>
-    <%= link_to "NTF Photo", nfts_path, class: "btn btn-success" %>
-    <%= link_to "Appel d'Urgence", nfts_path, class: "btn btn-success" %>
+  <div class="home_wrap">
+    <h2 class="subtitle">ton poto <strong>cérébral</strong></h2>
   </div>
+  <div class="links-homepage">
+    <%= link_to "Message Vocal", vocals_path, class: "b-brainbud" %>
+    <%= link_to "Créer une liste", lists_path, class: "b-brainbud" %>
+    <%= link_to "Position GPS", localisations_path, class: "b-brainbud" %>
+    <%= link_to "NTF Photo", nfts_path, class: "b-brainbud" %>
+
+    <div class="sound_record">
+      <button class="b-brainbud">
+        <%= phone_to "+33 754536825" do %>
+          <i class="fa-solid fa-phone"></i> Appel favori
+        <% end %>
+      </button>
+    </div>
+  </div>
+
+
   <div class="logos-container">
     <div class="logos">
       <%= image_tag "bb_micro.png", class: "A" %>

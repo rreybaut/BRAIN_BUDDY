@@ -2,7 +2,7 @@
   <%= render "shared/logo" %>
   <div class="local_box">
 
-    <h2 class="subtitle ">Localiser une adresse<h2>
+    <h2 class="subtitle "><strong>localiser</strong> une adresse<h2>
       <div id="new_local">
         <%= simple_form_for @localisation do |f| %>
           <div><%= f.text_field :address, placeholder: "recherche…", id: "form", class:"form-control address_search" %></div>

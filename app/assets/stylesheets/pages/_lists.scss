@@ -11,20 +11,13 @@ body {
 
   .list_record {
     position: relative;
-    top: -90px;
+    top: -70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
   }
-  .subtitle {
-    margin: auto;
-    color: $verttitle;
-    font-weight: 50;
-    font-size: 24px;
-    text-align: center;
-    font-family: roboto condensed;
-  }
+
   .messages {
     margin: auto;
     color: $verttitle;
