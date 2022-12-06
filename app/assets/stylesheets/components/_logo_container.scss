@@ -21,3 +21,26 @@
     }
   }
 }
+.logos-localisation {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  bottom: -64px;
+  justify-content: center;
+  .logos {
+    display: flex;
+    width: 375px;
+    .A {
+      z-index: 2;
+      position: relative;
+      left: 0px;
+      width: 50%;
+    }
+    .B {
+      z-index: 2;
+      position: relative;
+      right: 20px;
+      width: 50%;
+    }
+  }
+}

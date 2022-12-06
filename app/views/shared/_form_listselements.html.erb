@@ -1,7 +1,9 @@
-<div class="container">
-  <%= simple_form_for [@list, @listelement] do |f| %>
-    <%= f.label "Ajoutez une tâche :" %>
-    <%= f.input :content, label: false %>
-    <%= f.button :submit, 'Ajouter', class: 'btn btn-success' %>
-  <% end %>
+<div class="AnimatedBox">
+  <div class="form"><div class="container">
+    <%= simple_form_for [@list, @listelement] do |f| %>
+      <%= f.label "Ajoutez une tâche :" %>
+      <%= f.input :content, label: false %>
+      <%= f.button :submit, 'Ajouter', class: 'btn btn-new_user ' %>
+    <% end %>
+  </div>
 </div>

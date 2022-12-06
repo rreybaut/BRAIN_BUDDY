@@ -1,0 +1,27 @@
+.dropdown-toggle {
+	background-color: #179f9e;
+	border: none;
+	transition: ease .3s;
+}
+.dropdown-toggle:first-child:hover, :not(.dropdown-toggle-check)+.dropdown-toggle:hover {
+    background-color: #20bebd;
+}
+.dropdown-toggle-check:checked+.dropdown-toggle, .dropdown-toggle.active, .dropdown-toggle.show, .dropdown-toggle:first-child:active, :not(.dropdown-toggle-check)+.dropdown-toggle:active {
+    background-color: #20bebd;
+    }
+.dropdown-menu {
+	font-weight: lighter;
+	background-color: white;
+	transition: ease .3s;
+}
+.dropdown-menu a {
+	font-weight: lighter !important;
+	transition: ease .3s;
+}
+.dropdown-item:hover {
+	color: white;
+	background-color: rgb(180, 180, 180);
+}
+.dropdown {
+  z-index: 6;
+}

@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
+  font-family: 'Roboto Bold', sans-serif;
+}
+.local_page {
+  z-index: 0;
+  height: 90vh;
+  position: relative;
+
+  .local_box {
+    position: relative;
+    top: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .subtitle {
+    margin: auto;
+    color: $verttitle;
+    font-weight: 50;
+    font-size: 24px;
+    text-align: center;
+    font-family: roboto condensed;
+  }
+  .create-address-container {
+    display: flex;
+    justify-content:center;
+    .input-create-address {
+      width: 250px;
+      background-color: #c1f2df;
+      font-style: italic;
+      font-size: 20px;
+      opacity: 0.6;
+    }
+    .submit-create-map {
+      background: none;
+      border: none;
+      font-weight: bold;
+    }
+  }
+  .map_address {
+    display: flex;
+    justify-content:center;
+  }
+  .map-title {
+    margin: auto;
+    color: #27EB9D;
+    font-weight: 50;
+    font-size: 24px;
+    text-align: center;
+  }
+  #address-select {
+    position: relative;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-size: large;
+    top: 236px;
+    left: 9vw;
+    border-radius: 6px;
+    padding: 6px 8px;
+    height: 34px;
+    width: 306px;
+    border: 0;
+    z-index: 3;
+  }
+  form {
+    left: 34px;
+    position: relative;
+    background: #28292d;
+    padding: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    gap: 8px;
+  }
+  .edit_del-btn_loca {
+    z-index: 3;
+    right: 20px;
+    bottom: 178px;
+    position: absolute;
+    i {
+      font-size: 24px;
+    }
+  }
+}
