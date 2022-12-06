@@ -1,5 +1,6 @@
 class Localisation < ApplicationRecord
   belongs_to :user
+  validates :address, length: {minimum: 1}
 
   # Source of geocoding
   geocoded_by :address

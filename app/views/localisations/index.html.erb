@@ -12,6 +12,7 @@
 </div>
 <br>
 
+
   <div class="map-address">
   <form action="/localisations">
     <select name="yours" id="address-select" >
@@ -31,7 +32,9 @@
       data-map-markers-value="<%= [@markers[@index]].to_json %>"
       data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
     </div>
+    <br>
  </div>
+    <h3><%= @localisations[@index].address %></h3>
     <br>
     <a href="#">
     <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>

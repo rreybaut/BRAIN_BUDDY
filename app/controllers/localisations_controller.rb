@@ -11,7 +11,7 @@ class LocalisationsController < ApplicationController
         @index = 0
       end
       if current_user
-        @localisations = Localisation.where(user_id: current_user.id)
+        @localisations = Localisation.where(user_id: current_user.id).order("created_at DESC")
       else
         @localisations =  []
       end
@@ -29,10 +29,11 @@ class LocalisationsController < ApplicationController
     def create
       @localisation = Localisation.new(localisation_params)
       @localisation.user_id = current_user.id
+
       if @localisation.save
             redirect_to localisations_path
           else
-            render localisations_path, status: :unprocessable_entity
+            redirect_to localisations_path, alert: "Localisation en erreur"
           end
     end
 
