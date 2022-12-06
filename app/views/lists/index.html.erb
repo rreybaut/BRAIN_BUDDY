@@ -1,7 +1,10 @@
-<div class="listpage">
+<div class="listpage">startRecordingButton
   <%= render "shared/logo" %>
   <div class="list_record">
     <h2 class="subtitle">créer une <strong>liste</strong> de tâches</h2>
+
+        <button id="speakNow" class=" b-brainbud"><i class="fa-solid fa-microphone"></i> Start</button>
+
     <div class="AnimatedBox">
       <div class="form">
         <%= simple_form_for (@list) do |f| %>

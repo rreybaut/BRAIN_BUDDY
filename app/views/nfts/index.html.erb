@@ -2,11 +2,13 @@
 <ul class="nft_container">
   <li>
       <div class="card-trip">
-      <% @nfts.each do |nft| %>
-        <%= link_to nft_path(nft) do %>
-          <%= cl_image_tag nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
+        <% @nfts.each do |nft| %>
+          <% if nft.photo.attached? %>
+            <%= link_to nft_path(nft) do %>
+              <%= cl_image_tag nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
+          <% end %>
+        <% end %>
         </div>
-      <% end %>
     </li>
   <% end %>
 
