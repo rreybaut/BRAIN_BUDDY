@@ -4,3 +4,5 @@ import "./controllers"
 import "bootstrap"
 import { soundRecord } from "./components/sound_record";
 soundRecord()
+import { commandeVocal } from "./components/sound_record";
+commandeVocal()
