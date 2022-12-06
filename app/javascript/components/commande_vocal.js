@@ -1,4 +1,4 @@
-export const commandeVocale = () => {
+export const commandeVocal = () => {
 
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
@@ -70,6 +70,38 @@ export const commandeVocale = () => {
 
       console.log('Confidence: ' + event.results[0][0].confidence);
     }
+
+
+    //test 2
+    recognition.onresult = function(event) {
+      var interim_transcript = '';
+
+      for (var i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          final_transcript += event.results[i][0].transcript;
+        } else {
+          interim_transcript += event.results[i][0].transcript;
+        }
+      }
+      final_transcript = capitalize(final_transcript);
+      final_span.innerHTML = linebreak(final_transcript);
+      interim_span.innerHTML = linebreak(interim_transcript);
+    };
+  }
+
+    // Commande vocale navigation
+    // recognition.addEventListener = ("speechResult", ({ results })) => {
+    //   const { confidence, transcript } = results[0][0];
+    //   switch(transcript) {
+    //     case "accueil":
+    //       console.log("Condidence", confidence);
+    //       console.log("Transcript", transcript);
+    //       break;
+
+    //     default:
+    //       break;
+    //   }
+    // }
 
     recognition.onspeechend = function() {
       recognition.stop();

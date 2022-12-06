@@ -5,12 +5,20 @@
   </div>
 
   <div class="vocal_record">
-      <p id="reco_string">Ceci est la phrase dictée</p>
+        <div>
+          <span id="interim_span"><%= root_path %></span>
+        </div>
       <button class=" b-brainbud">Commencer un test</button>
+
+        <p class="phrase">Phrase...</p>
+        <p class="result">Vrai ou Faux ?</p>
+        <p class="output">...diagnostic messages</p>
+
+        <%= link_to "Accueil", root_path, id:"navigateToHomePage", class: "b-brainbud" %>
   </div>
 
   <div class="sound_record">
-    <button id="startRecordingButton" class=" b-brainbud"><i class="fa-solid fa-microphone"></i> Start</button>
+    <button id="startRecordingButton" class=" b-brainbud"><i class="fa-solid fa-wand-magic-sparkles"></i> Start</button>
     <button id="stopRecordingButton" class=" b-brainbud"><i class="fa-solid fa-microphone-slash"></i> Stop</button>
     <button id="playButton" class=" b-brainbud"><i class="fa-solid fa-headphones"></i> Play</button>
     <button id="downloadButton" class=" b-brainbud"><i class="fa-solid fa-cloud-arrow-down"></i> Download</button>
