@@ -9,21 +9,33 @@ body {
   height: 90vh;
   position: relative;
 
-  .sound_record {
+  .vocal_wrap {
     position: relative;
-    top: -110px;
+    top: -90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 8px;
   }
+
   .subtitle {
     margin: auto;
     color: $verttitle;
     font-weight: 50;
     font-size: 24px;
     text-align: center;
+    font-family: roboto condensed;
   }
+
+  .sound_record {
+    position: relative;
+    top: -76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
   .flexbox {
     display: flex;
     justify-content: space-evenly;

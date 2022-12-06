@@ -56,3 +56,17 @@
   width: 100px;
   margin-top: 4px;
 }
+.b-audio {
+  width: 120px;
+  color: white;
+  border-radius: 57px;
+  background: linear-gradient(#4a0070, #ff007a);
+  padding: 6px 0;
+  font-family: roboto condensed;
+  transition: ease .3s;
+}
+.b-audio:hover {
+  font-size: larger;
+  color: $black;
+  background: linear-gradient(#ff8400, #ffd500);
+}
