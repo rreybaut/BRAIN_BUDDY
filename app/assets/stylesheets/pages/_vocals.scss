@@ -9,21 +9,46 @@ body {
   height: 90vh;
   position: relative;
 
-  .sound_record {
+  .vocal_wrap {
     position: relative;
-    top: -110px;
+    top: -90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 8px;
   }
+
+  .b-audio {
+    width: 90px;
+    border-radius: 6px;
+    background: linear-gradient(#e9e9e9, #5dcfba);
+    color: $black;
+    padding: 12px;
+    font-family: roboto condensed;
+  }
+  .b-audio:hover {
+    color: $white;
+    background: linear-gradient(#4a0070, #ff007a);
+  }
+
   .subtitle {
     margin: auto;
     color: $verttitle;
     font-weight: 50;
     font-size: 24px;
     text-align: center;
+    font-family: roboto condensed;
   }
+
+  .sound_record {
+    position: relative;
+    top: -76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
   .flexbox {
     display: flex;
     justify-content: space-evenly;
