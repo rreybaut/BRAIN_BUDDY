@@ -41,9 +41,18 @@
   background-color: $fushia;
 }
 #btn-new_user {
-  width: fit-content;
   font-size: 1.2em;
   font-weight: 600;
   font-family: roboto condensed;
   width: max-content;
+  padding: 0 12px;
+}
+.btn-localisation {
+  border: none;
+  background: #45f3ff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 4px;
 }
