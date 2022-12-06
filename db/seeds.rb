@@ -24,3 +24,5 @@ Localisation.create!(user_id: karine.id, address: "300 Av du General De Gaulle, 
 Localisation.create!(user_id: karine.id, address: "10 rue de Rome, Marseille", longitude: 5.3785415 , latitude: 43.2950062)
 Localisation.create!(user_id: karine.id, address: "18 rue Bonaparte, Nice", longitude: 7.2672797, latitude: 43.7013388)
 Localisation.create!(user_id: karine.id, address: "19 rue Hoche, Cannes", longitude:0.0 , latitude: nil)
+
+Nft.create!(user_id: valeria.id)

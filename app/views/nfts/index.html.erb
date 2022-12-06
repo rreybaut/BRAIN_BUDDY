@@ -1,0 +1,23 @@
+
+<ul class="nft_container">
+  <li>
+    <%= link_to nft_path(@nfts) do %>
+      <div class="card-trip">
+      <% @nfts.each do |nft| %>
+          <%= cl_image_tag nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+
+  </ul>
+  <div class="container new-container">
+  <h1>Ouvre your sprit</h1>
+
+  <div id="form_nft">
+    <%= render "form", nft: @nft %>
+  </div>
+
+</div>
+
+</div>

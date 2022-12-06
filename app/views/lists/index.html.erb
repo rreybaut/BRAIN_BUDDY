@@ -1,36 +1,25 @@
-<div class="banner">
-  <h1>Liste de tâches</h1>
-</div >
-<div class="container">
-  <div class="wrapper-vocals">
-        <h1>Dictez votre liste</h1>
-    </div>
-    <div class="container">
-    <div class="row  justify-content-center">
-      <div class="col-12 col-lg-6">
-      <%= simple_form_for (@list) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :date, as: :date%>
-      <%= f.label "Add a comment :" %>
-      <%= f.button :submit, 'Submit This Form', class: 'btn btn-success' %>
-      <%= render "shared/form_listselements" %>
-      <% end %>
+<div class="listpage">
+  <%= render "shared/logo" %>
+  <div class="list_record">
+    <h2 class="subtitle">Créer une liste</h2>
+    <div class="AnimatedBox">
+      <div class="form">
+        <%= simple_form_for (@list) do |f| %>
+          <h5 class="hStyle">TITRE</h5>
+          <%= f.input :title, label:false %>
+          <%= f.button :submit, 'Créer', class: 'btn-new_user' %>
+        <% end %>
       </div>
     </div>
     <br>
-    <h1>Vos messages</h1>
-    <div class="container-flex">
-        <% @lists.each do |list| %>
-            <div class="msg">
-              <em class="ita-msg"><%= "(créé le #{list.created_at}) :" %></em>
-              <%# <p><%= "#{list.audio}"</p> %>
-              <%= link_to "Delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class: "btn btn-warning" %>
-            </div>
-            <br>
-
-          <% end %>
-        </div>
-      </div>
+    <div class="form-list">
+      <%= render "shared/obj-list" %>
+    </div>
+  </div>
+  <div class="logos-container">
+    <div class="logos">
+      <%= image_tag "bb_micro.png", class: "A" %>
+      <%= image_tag "bb_halteres.png", class: "logos B" %>
     </div>
   </div>
 </div>

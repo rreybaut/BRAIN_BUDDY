@@ -1,0 +1,19 @@
+<div class="container">
+  <%= render "shared/logo" %>
+  <div class="pos-show-H5">
+    <h5><%= "#{@list.title}" %></h5>
+    <em class="ita-msg"><%= "(créé le #{@list.created_at.strftime("%d/%m/%Y")})" %></em>
+  </div>
+  <p><%= "#{@listelement.content}" %></p>
+
+  <div class="pos-show-form">
+    <%= render "shared/form_listselements" %>
+  </div>
+
+</div>
+<div class="logos-container">
+    <div class="logos">
+      <%= image_tag "bb_micro.png", class: "A" %>
+      <%= image_tag "bb_halteres.png", class: "logos B" %>
+    </div>
+  </div>

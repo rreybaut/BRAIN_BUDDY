@@ -5,26 +5,17 @@ body {
   font-family: 'Roboto Bold', sans-serif;
 }
 .vocalpage {
-  height: 100vh;
+  z-index: 0;
+  height: 90vh;
   position: relative;
 
-  .rotate-title {
-    position: absolute;
-    top: -38px;
-    left: 75px;
-    transform: rotate(-15deg);
-    color: $fushia;
-    font-weight: 500;
-    font-size: 40px;
-    transform: rotate(-15deg);
-  }
-
-  .title {
-    margin: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 38px;
-    text-align: center;
+  .vocal_wrap {
+    position: relative;
+    top: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .subtitle {
@@ -33,7 +24,18 @@ body {
     font-weight: 50;
     font-size: 24px;
     text-align: center;
+    font-family: roboto condensed;
   }
+
+  .sound_record {
+    position: relative;
+    top: -76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
   .flexbox {
     display: flex;
     justify-content: space-evenly;
@@ -51,27 +53,8 @@ body {
     flex-wrap: wrap;
     width: 50%;
     margin: auto;
-
-    .btn-success{
-      margin-top: 36px;
-      width: 200px;
-      height: 42px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #008f8c;
-    }
-    }
-
-
-  .logos-container {
-    display: flex;
-    position: absolute;
-    bottom: 50px;
-    .homepage-logo {
-      width: 90px;
-      object-fit: cover;
-    }
   }
+
   .scroller {
     width: 500px;
     height: 300px;
@@ -79,22 +62,14 @@ body {
     scrollbar-color: $fushia;
     scrollbar-width: thin;
   }
-
 }
-
-  /* Medium devices */
-
-  @media (max-width: 1400px) {
-  .vocalpage {
-    // flex-direction: column;
-    height: 300%;
-  }
-}
-
-  //   .logos-container {
-  //   height: 50%;
-  //   }
-  // }
-.far {
-  color: white
-}
+//   /* Medium devices */
+// @media (max-width: 1400px) {
+//   .vocalpage {
+//     width: 100vw;
+//     height: 100vh;
+//   }
+// }
+// .far {
+//   color: white
+// }

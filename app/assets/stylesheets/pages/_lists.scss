@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
+  font-family: 'Roboto Bold', sans-serif;
+}
+.listpage {
+  z-index: 1;
+  height: 90vh;
+  position: relative;
+
+  .list_record {
+    position: relative;
+    top: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .subtitle {
+    margin: auto;
+    color: $verttitle;
+    font-weight: 50;
+    font-size: 24px;
+    text-align: center;
+    font-family: roboto condensed;
+  }
+  .messages {
+    margin: auto;
+    color: $verttitle;
+    font-weight: 50;
+    font-size: 24px;
+    text-align: center;
+  }
+  .ita-msg {
+    color: $gray;
+    font-family: roboto light;
+    font-size: 0.9em;
+  }
+  .obj-postit {
+    z-index: 5;
+    position: absolute;
+    padding: 12px;
+    background-color: #fffba3;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    height: 218px;
+    width: 190px;
+    left: 145px;
+    top: 152px;
+    transform: rotate(6deg);
+    box-shadow: #0000008c 8px 4px 10px 0px;
+  }
+  .scroller {
+    width: 500px;
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-color: $fushia;
+    scrollbar-width: thin;
+  }
+  .list_checked {
+    text-decoration: line-through;
+    a {
+      color: $black;
+    }
+  }
+  .list_unchecked {
+    text-decoration: none;
+    a {
+      color: $black;
+    }
+  }
+  .obj-flex {
+    opacity: 0.85;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    h5 {
+      font-family: roboto;
+      font-size: 1.4em;
+    }
+    ul {
+      padding-left: 12px;
+    }
+    li {
+      font-size: 1.1em;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .edit_del-btn {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 4px;
+    left: 104px;
+  }
+}
+.pos-show-form {
+  position: absolute;
+  top: 210px;
+  left: 7px;
+  .btn-new_user{
+    width: fit-content;
+    padding: 4px 16px;
+  }
+}
+.pos-show-H5 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 134px;
+  left: 88px;
+  background-color: $post-it;
+  padding: 12px;
+  em {
+    text-align: center;
+    font-size: 0.8em;
+  }
+}

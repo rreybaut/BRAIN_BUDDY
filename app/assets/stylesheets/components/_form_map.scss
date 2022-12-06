@@ -1,38 +1,26 @@
-.create-address-container{
+#form_local {
+  position: absolute;
+  background: #28292d;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
   display: flex;
-  justify-content:center;
-  .input-create-address {
-    width: 250px;
-    background-color: #c1f2df;
-    font-style: italic;
-    font-size: 20px;
-    opacity: 0.6;
-  }
-  .submit-create-map{
-    background: none;
-    border: none;
-    font-weight: bold;
-  }
+  flex-direction: column;
 }
-
-.map_address{
-  display: flex;
-  justify-content:center;
+#new_local {
 }
-
-.map-title{
-  margin: auto;
-  color: #27EB9D;
-  font-weight: 50;
-  font-size: 24px;
-  text-align: center;
+.address_search {
+  width: 240px;
 }
-
-#address-select{
-  display: flex;
-  justify-content: center;
-  width: 250px;
-  font-weight: normal;
-  font-size: 20px;
-  padding: 2px 5px;
+#register-button {
+  color: $white;
+  width: fit-content;
+  border-radius: 6px;
+  background-color: $fushia;
+}
+#register-button:hover {
+  color: $white;
+  width: fit-content;
+  border-radius: 6px;
+  background-color: $black;
 }
