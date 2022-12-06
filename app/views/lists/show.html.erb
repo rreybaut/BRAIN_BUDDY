@@ -1,9 +1,15 @@
 <div class="container">
-  <h5><%= "#{@list.title}" %></h5>
-  <em class="ita-msg"><%= "(créé le #{@list.date}) :" %></em>
+  <%= render "shared/logo" %>
+  <div class="pos-show-H5">
+    <h5><%= "#{@list.title}" %></h5>
+    <em class="ita-msg"><%= "(créé le #{@list.created_at.strftime("%d/%m/%Y")})" %></em>
+  </div>
   <p><%= "#{@listelement.content}" %></p>
 
-  <%= render "shared/form_listselements" %>
+  <div class="pos-show-form">
+    <%= render "shared/form_listselements" %>
+  </div>
+
 </div>
 <div class="logos-container">
     <div class="logos">
