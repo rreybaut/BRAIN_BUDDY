@@ -33,7 +33,7 @@ body {
   .obj-postit {
     margin-bottom: 300px;
     z-index: 5;
-    position: relative;
+    position: absolute;
     padding: 12px;
     background-color: #fffba3;
     gap: 4px;
@@ -41,8 +41,8 @@ body {
     flex-direction: column;
     height: 218px;
     width: 190px;
-    left: 52px;
-    top: -324px;
+    left: 148px;
+    top: 212px;
     transform: rotate(6deg);
     box-shadow: #0000008c 8px 4px 10px 0px;
   }
