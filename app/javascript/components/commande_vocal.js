@@ -1,27 +1,29 @@
 export const commandeVocal = () => {
-
-  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-  var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-  var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
-
-  var phrases = [
-    'j\'enregistre un message',
-    'comment ça va',
-    'je vais à l\'école',
-    'je mange une pomme',
-    'le chien aboie',
-    'le poisson nage',
-    'bonne journée',
-    'au revoir à lundi'
-  ];
-
-  var phrasePara = document.querySelector('.phrase');
-  var resultPara = document.querySelector('.result');
-  var diagnosticPara = document.querySelector('.output');
-
   var testBtn = document.querySelector('button');
 
-  function randomPhrase() {
+  if (testBtn) {
+
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+    var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+
+    var phrases = [
+      'j\'enregistre un message',
+      'comment ça va',
+      'je vais à l\'école',
+      'je mange une pomme',
+      'le chien aboie',
+      'le poisson nage',
+      'bonne journée',
+      'au revoir à lundi'
+    ];
+
+    var phrasePara = document.querySelector('.phrase');
+    var resultPara = document.querySelector('.result');
+    var diagnosticPara = document.querySelector('.output');
+
+
+    function randomPhrase() {
     var number = Math.floor(Math.random() * phrases.length);
     return number;
   }
@@ -73,35 +75,23 @@ export const commandeVocal = () => {
 
 
     //test 2
-    recognition.onresult = function(event) {
-      var interim_transcript = '';
+    //   recognition.onresult = function(event) {
+  //     var interim_transcript = '';
 
-      for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) {
-          final_transcript += event.results[i][0].transcript;
-        } else {
-          interim_transcript += event.results[i][0].transcript;
-        }
-      }
-      final_transcript = capitalize(final_transcript);
-      final_span.innerHTML = linebreak(final_transcript);
-      interim_span.innerHTML = linebreak(interim_transcript);
-    };
-  }
+  //     for (var i = event.resultIndex; i < event.results.length; ++i) {
+  //       if (event.results[i].isFinal) {
+  //         final_transcript += event.results[i][0].transcript;
+  //       } else {
+  //         interim_transcript += event.results[i][0].transcript;
+  //       }
+  //     }
+  //     final_transcript = capitalize(final_transcript);
+  //     final_span.innerHTML = linebreak(final_transcript);
+  //     interim_span.innerHTML = linebreak(interim_transcript);
+  //   };
+  // }
 
-    // Commande vocale navigation
-    // recognition.addEventListener = ("speechResult", ({ results })) => {
-    //   const { confidence, transcript } = results[0][0];
-    //   switch(transcript) {
-    //     case "accueil":
-    //       console.log("Condidence", confidence);
-    //       console.log("Transcript", transcript);
-    //       break;
-
-    //     default:
-    //       break;
-    //   }
-    // }
+  // Commande vocale navigation
 
     recognition.onspeechend = function() {
       recognition.stop();
@@ -118,32 +108,32 @@ export const commandeVocal = () => {
     recognition.onaudiostart = function(event) {
         //Fired when the user agent has started to capture audio.
         console.log('SpeechRecognition.onaudiostart');
-    }
+      }
 
-    recognition.onaudioend = function(event) {
+      recognition.onaudioend = function(event) {
         //Fired when the user agent has finished capturing audio.
         console.log('SpeechRecognition.onaudioend');
-    }
+      }
 
-    recognition.onend = function(event) {
+      recognition.onend = function(event) {
         //Fired when the speech recognition service has disconnected.
         console.log('SpeechRecognition.onend');
-    }
+      }
 
-    recognition.onnomatch = function(event) {
+      recognition.onnomatch = function(event) {
         //Fired when the speech recognition service returns a final result with no significant recognition. This may involve some degree of recognition, which doesn't meet or exceed the confidence threshold.
         console.log('SpeechRecognition.onnomatch');
-    }
+      }
 
-    recognition.onsoundstart = function(event) {
+      recognition.onsoundstart = function(event) {
         //Fired when any sound — recognisable speech or not — has been detected.
         console.log('SpeechRecognition.onsoundstart');
-    }
+      }
 
-    recognition.onsoundend = function(event) {
+      recognition.onsoundend = function(event) {
         //Fired when any sound — recognisable speech or not — has stopped being detected.
         console.log('SpeechRecognition.onsoundend');
-    }
+      }
 
     recognition.onspeechstart = function (event) {
         //Fired when sound that is recognised by the speech recognition service as speech has been detected.
@@ -152,16 +142,17 @@ export const commandeVocal = () => {
     recognition.onstart = function(event) {
         //Fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition.
         console.log('SpeechRecognition.onstart');
+      }
     }
+
+    testBtn.addEventListener('click', testSpeech);
+
+
+
+
+
+
   }
-
-  testBtn.addEventListener('click', testSpeech);
-
-
-
-
-
-
 
 
 }
