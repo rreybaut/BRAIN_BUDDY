@@ -19,6 +19,7 @@ body {
   }
 
   .vocal_record {
+    z-index: 3;
     position: relative;
     top: -70px;
     display: flex;
