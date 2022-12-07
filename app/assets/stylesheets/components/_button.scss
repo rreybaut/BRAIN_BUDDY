@@ -122,3 +122,8 @@
 #register-button:hover {
   background-color: $black;
 }
+
+.record-active {
+  background-color: red;
+  background-blend-mode: lighten;
+}
