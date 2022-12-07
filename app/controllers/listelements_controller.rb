@@ -28,9 +28,9 @@ class ListelementsController < ApplicationController
       @listelement.check = true
     end
     if @listelement.save
-      redirect_to list_path
+      redirect_to lists_path
     else
-      redirect_to list_path, status: :unprocessable_entity
+      redirect_to lists_path, status: :unprocessable_entity
     end
   end
 
