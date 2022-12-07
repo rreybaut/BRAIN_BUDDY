@@ -11,7 +11,7 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
-// import { syntheseVocal } from "./components/synthese_vocal";
+import { syntheseVocal } from "./components/synthese_vocal";
 import { commandeVocal } from "./components/commande_vocal";
 import { soundRecord } from "./components/sound_record";
 
@@ -19,5 +19,5 @@ document.addEventListener("turbolinks:load", function () {
   console.log('coucou');
   soundRecord()
   commandeVocal()
-  // syntheseVocal()
+  syntheseVocal()
 });
