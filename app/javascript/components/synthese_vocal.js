@@ -1,10 +1,11 @@
+
 export const syntheseVocal = () => {
   function speakNow(text) {
     const message = new SpeechSynthesisUtterance(text);
     message.lang = "fr-FR";
 
-    const voices = speechSynthesis.getVoices().filter(voice => voice.lang === "en-US");
-    message.voice = voices[0];
+//     const voices = speechSynthesis.getVoices().filter(voice => voice.lang === "en-US");
+//     message.voice = voices[0];
 
     speechSynthesis.speak(message);
   }

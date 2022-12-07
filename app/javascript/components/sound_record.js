@@ -1,19 +1,23 @@
 export const soundRecord = () => {
-  var startRecordingButton = document.getElementById("startRecordingButton");
-        var stopRecordingButton = document.getElementById("stopRecordingButton");
-        var playButton = document.getElementById("playButton");
-        var downloadButton = document.getElementById("downloadButton");
+        var startRecordingButton = document.getElementById("startRecordingButton");
+        // si ce bouton existe le script est chargé dans la page
+        if (startRecordingButton) {
+          console.log('rzcord');
+
+          var stopRecordingButton = document.getElementById("stopRecordingButton");
+          var playButton = document.getElementById("playButton");
+          var downloadButton = document.getElementById("downloadButton");
 
 
-        var leftchannel = [];
-        var rightchannel = [];
-        var recorder = null;
-        var recordingLength = 0;
-        var volume = null;
-        var mediaStream = null;
-        var sampleRate = 44100;
-        var context = null;
-        var blob = null;
+          var leftchannel = [];
+          var rightchannel = [];
+          var recorder = null;
+          var recordingLength = 0;
+          var volume = null;
+          var mediaStream = null;
+          var sampleRate = 44100;
+          var context = null;
+          var blob = null;
 
         startRecordingButton.addEventListener("click", function () {
             // Initialize recorder
@@ -40,7 +44,7 @@ export const soundRecord = () => {
                 if (context.createScriptProcessor) {
                     recorder = context.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
                 } else {
-                    recorder = context.createJavaScriptNode(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+                  recorder = context.createJavaScriptNode(bufferSize, numberOfInputChannels, numberOfOutputChannels);
                 }
 
                 recorder.onaudioprocess = function (e) {
@@ -52,7 +56,7 @@ export const soundRecord = () => {
                 // we connect the recorder
                 mediaStream.connect(recorder);
                 recorder.connect(context.destination);
-            },
+              },
                         function (e) {
                             console.error(e);
                         });
@@ -97,28 +101,28 @@ export const soundRecord = () => {
             var index = 44;
             var volume = 1;
             for (var i = 0; i < interleaved.length; i++) {
-                view.setInt16(index, interleaved[i] * (0x7FFF * volume), true);
+              view.setInt16(index, interleaved[i] * (0x7FFF * volume), true);
                 index += 2;
-            }
+              }
 
             // our final blob
             blob = new Blob([view], { type: 'audio/wav' });
         });
 
         playButton.addEventListener("click", function () {
-            if (blob == null) {
+          if (blob == null) {
                 return;
-            }
+              }
 
             var url = window.URL.createObjectURL(blob);
             var audio = new Audio(url);
             audio.play();
-        });
+          });
 
         downloadButton.addEventListener("click", function () {
-            if (blob == null) {
+          if (blob == null) {
                 return;
-            }
+              }
 
             var url = URL.createObjectURL(blob);
 
@@ -129,16 +133,16 @@ export const soundRecord = () => {
             a.download = "sample.wav";
             a.click();
             window.URL.revokeObjectURL(url);
-        });
+          });
 
         function flattenArray(channelBuffer, recordingLength) {
             var result = new Float32Array(recordingLength);
             var offset = 0;
             for (var i = 0; i < channelBuffer.length; i++) {
-                var buffer = channelBuffer[i];
+              var buffer = channelBuffer[i];
                 result.set(buffer, offset);
                 offset += buffer.length;
-            }
+              }
             return result;
         }
 
@@ -152,13 +156,14 @@ export const soundRecord = () => {
                 result[index++] = leftChannel[inputIndex];
                 result[index++] = rightChannel[inputIndex];
                 inputIndex++;
-            }
+              }
             return result;
         }
 
         function writeUTFBytes(view, offset, string) {
-            for (var i = 0; i < string.length; i++) {
+          for (var i = 0; i < string.length; i++) {
                 view.setUint8(offset + i, string.charCodeAt(i));
             }
         }
+      }
 }
