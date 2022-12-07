@@ -5,7 +5,7 @@
       <ul>
       <% list.listelements.each do |task| %>
         <% if task.content %>
-          <li class= <%= "list_checked" if task.check %> ><%= link_to task.content, list_listelement_path(id:task.id, list_id:list.id), data: {turbo_method:"patch"}, class: 'task-list-element' %></li>
+          <li class= <%= "list_checked" if task.check %> ><%= link_to task.content, list_listelement_path(id:task.id, list_id:list.id), method: :patch, class: 'task-list-element' %></li>
         <% end %>
       <% end %>
       </ul>
