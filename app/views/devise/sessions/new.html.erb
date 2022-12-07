@@ -7,7 +7,7 @@
   <div class="login_flex-B">
     <div class="AnimatedBox_login">
       <div id="form_login">
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
             <%= f.input :email,
                         required: false,

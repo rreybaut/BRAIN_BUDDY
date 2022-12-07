@@ -15,14 +15,6 @@ export const syntheseVocal = () => {
   button.addEventListener("click", () => {
     speakNow( `Votre liste ${title} contient` );
 
-    // console.log(title);
-    // console.log(title);
-    console.log(taskList);
-    // console.log(taskList);
-    // listElement.forEach((item)=>{
-    //   // speakNow( `Votre liste ${item} contient` )
-    //   console.log(item.value)
-    // })
     taskList.forEach((element)=>{
       speakNow( `${element.innerHTML}` )
       console.log(element.innerHTML)

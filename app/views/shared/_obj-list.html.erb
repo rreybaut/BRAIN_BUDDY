@@ -1,17 +1,17 @@
 <% @lists.each do |list| %>
   <div class="obj-postit">
     <div class="obj-flex">
-      <h5 class='list-element-to-speak'><%= "#{list.title}" %></h5>
+      <h5><%= "#{list.title}" %></h5>
       <ul>
       <% list.listelements.each do |task| %>
         <% if task.content %>
-          <li class= <%= "list_checked" if task.check %> ><%= link_to task.content, list_listelement_path(id:task.id, list_id:list.id), data: {turbo_method:"patch"}, class: 'task-list-element' %></li>
+          <li class= <%= "list_checked" if task.check %> ><%= link_to task.content, list_listelement_path(id:task.id, list_id:list.id), method:"patch" %></li>
         <% end %>
       <% end %>
       </ul>
       <div class="edit_del-btn">
         <%= link_to "éditer", list_path(list), class: "btn btn-form" %>
-        <%= link_to list_path(list), method: :delete, data: {confirm: "Are you sure ?"}, class:'btn btn-form' do %>
+        <%= link_to list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class:'btn btn-form' do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
       </div>
