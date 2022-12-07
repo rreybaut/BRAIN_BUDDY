@@ -11,7 +11,7 @@ body {
 
   .list_record {
     position: relative;
-    top: -70px;
+    top: -90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ body {
   }
   .obj-postit {
     z-index: 5;
-    position: absolute;
+    position: relative;
     padding: 12px;
     background-color: #fffba3;
     gap: 4px;
@@ -40,8 +40,8 @@ body {
     flex-direction: column;
     height: 218px;
     width: 190px;
-    left: 145px;
-    top: 152px;
+    left: 52px;
+    top: -324px;
     transform: rotate(6deg);
     box-shadow: #0000008c 8px 4px 10px 0px;
   }
