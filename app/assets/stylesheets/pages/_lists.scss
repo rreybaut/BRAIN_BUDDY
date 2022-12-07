@@ -11,7 +11,7 @@ body {
 
   .list_record {
     position: relative;
-    top: -90px;
+    top: -86px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +31,7 @@ body {
     font-size: 0.9em;
   }
   .obj-postit {
+    margin-bottom: 300px;
     z-index: 5;
     position: relative;
     padding: 12px;
