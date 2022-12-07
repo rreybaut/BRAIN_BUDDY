@@ -2,12 +2,9 @@ export const soundRecord = () => {
         var startRecordingButton = document.getElementById("startRecordingButton");
         // si ce bouton existe le script est chargé dans la page
         if (startRecordingButton) {
-          console.log('rzcord');
-
           var stopRecordingButton = document.getElementById("stopRecordingButton");
           var playButton = document.getElementById("playButton");
           var downloadButton = document.getElementById("downloadButton");
-
 
           var leftchannel = [];
           var rightchannel = [];
@@ -20,6 +17,16 @@ export const soundRecord = () => {
           var blob = null;
 
         startRecordingButton.addEventListener("click", function () {
+          startRecordingButton.classList.add('record-active')
+          leftchannel = [];
+          rightchannel = [];
+          recorder = null;
+          recordingLength = 0;
+          volume = null;
+          mediaStream = null;
+          sampleRate = 44100;
+          context = null;
+          blob = null;
             // Initialize recorder
             navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
             navigator.getUserMedia(
@@ -63,6 +70,7 @@ export const soundRecord = () => {
         });
 
         stopRecordingButton.addEventListener("click", function () {
+          startRecordingButton.classList.remove('record-active')
 
             // stop recording
             recorder.disconnect(context.destination);
