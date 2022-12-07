@@ -1,7 +1,7 @@
 export const commandeVocal = () => {
-  var testBtn = document.querySelector('button');
+  var startTranscript = document.querySelector('startTranscript');
 
-  if (testBtn) {
+  if (startTranscript) {
 
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
@@ -72,26 +72,6 @@ export const commandeVocal = () => {
 
       console.log('Confidence: ' + event.results[0][0].confidence);
     }
-
-
-    //test 2
-    //   recognition.onresult = function(event) {
-  //     var interim_transcript = '';
-
-  //     for (var i = event.resultIndex; i < event.results.length; ++i) {
-  //       if (event.results[i].isFinal) {
-  //         final_transcript += event.results[i][0].transcript;
-  //       } else {
-  //         interim_transcript += event.results[i][0].transcript;
-  //       }
-  //     }
-  //     final_transcript = capitalize(final_transcript);
-  //     final_span.innerHTML = linebreak(final_transcript);
-  //     interim_span.innerHTML = linebreak(interim_transcript);
-  //   };
-  // }
-
-  // Commande vocale navigation
 
     recognition.onspeechend = function() {
       recognition.stop();

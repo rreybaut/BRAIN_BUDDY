@@ -11,7 +11,7 @@
       </ul>
       <div class="edit_del-btn">
         <%= link_to "éditer", list_path(list), class: "btn btn-form" %>
-        <%= link_to list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"}, class:'btn btn-form' do %>
+        <%= link_to list_path(list), method: :delete, data: {confirm: "Are you sure ?"}, class:'btn btn-form' do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
       </div>
