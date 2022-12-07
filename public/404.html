@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
 
-  .rails-default-error-page {
+  .page-error {
     background-color: #8edae1;
 
     color: #2E2F30;
@@ -23,7 +23,7 @@
 
   }
 
-  rails-default-error-page div.dialog > div {
+  page-error div.dialog > div {
 /*
     border: 1px solid rgb(146, 196, 234);
     border-right-color: rgb(51, 228, 237);
@@ -36,13 +36,13 @@
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
-  .rails-default-error-page h1 {
+  .page-error h1 {
     font-size: 150%;
     color: #73b1d2;
     line-height: 2em;
   }
 
-  .rails-default-error-page div.dialog > p {
+  .page-error div.dialog > p {
 
     margin: 0 0 1em;
     padding: 1em;
@@ -61,15 +61,18 @@
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="page-error">
   <!-- This file lives in public/404.html -->
   <div class="dialog">
     <div>
-      <h1>We are sorry!</h1>
-      <p>Oh la la </p>
+      <h1>Oops!</h1>
+      <h1>Rien par ici</h1>
+
       <img src="./bb_loupe.png" alt="image" width="300" height="200">
 
     </div>
+    <br>
+    <h1>Voici un lien de retour</h1>
     <a href="/">Brain Buddy</a>
 
   </div>
