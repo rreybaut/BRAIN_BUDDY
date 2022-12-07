@@ -37,7 +37,9 @@ class NftsController < ApplicationController
   end
 
   def destroy
-    @nfts = Nft.find(params[:id])
+    # @nfts = Nft.find(params[:id])
+    @nft.photo.purge
+
     @nft.destroy
     redirect_to nfts_path, status: :see_other
   end

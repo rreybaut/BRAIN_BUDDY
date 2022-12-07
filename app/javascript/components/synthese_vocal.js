@@ -1,6 +1,6 @@
 export const syntheseVocal = () => {
-  function speakNow() {
-    const message = new SpeechSynthesisUtterance("Bonjour");
+  function speakNow(text) {
+    const message = new SpeechSynthesisUtterance(text);
     message.lang = "fr-FR";
 
     const voices = speechSynthesis.getVoices().filter(voice => voice.lang === "en-US");
@@ -8,4 +8,9 @@ export const syntheseVocal = () => {
 
     speechSynthesis.speak(message);
   }
+
+  const button = document.querySelector("#speak-now");
+  button.addEventListener("click", () => {
+    speakNow(`Hello Diana sa farte`)
+  });
 }
