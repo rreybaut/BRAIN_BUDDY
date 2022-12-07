@@ -3,6 +3,6 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 import { soundRecord } from "./components/sound_record";
-soundRecord()
+// soundRecord()
 import { syntheseVocal } from "./components/synthese_vocal";
 syntheseVocal()

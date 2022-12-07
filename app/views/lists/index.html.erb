@@ -1,9 +1,9 @@
-<div class="listpage">startRecordingButton
+<div class="listpage">
   <%= render "shared/logo" %>
   <div class="list_record">
     <h2 class="subtitle">créer une <strong>liste</strong> de tâches</h2>
 
-        <button id="speakNow" class=" b-brainbud"><i class="fa-solid fa-microphone"></i> Start</button>
+        <button id="speak-now" class=" b-brainbud"><i class="fa-solid fa-microphone"></i> Start</button>
 
     <div class="AnimatedBox">
       <div class="form">
@@ -26,3 +26,25 @@
     </div>
   </div>
 </div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Récupérer la valeur d'un input texte</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Entrez une valeur ici" id="in">
+    <button type="button" onclick="getValue();">Récupérer la valeur</button>
+
+    <script>
+      function getValue() {
+    // Sélectionner l'élément input et récupérer sa valeur
+    var input = document.getElementById("in").value;
+
+    // Afficher la valeur
+    alert(input);
+}
+    </script>
+  </body>
+</html>
