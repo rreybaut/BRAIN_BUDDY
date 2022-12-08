@@ -3,6 +3,10 @@ body {
   padding: 0;
   background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
   font-family: 'Roboto Bold', sans-serif;
+
+  .form-list{
+    position: relative;
+  }
 }
 .listpage {
   z-index: 1;
@@ -41,8 +45,8 @@ body {
     flex-direction: column;
     height: 218px;
     width: 190px;
-    left: 148px;
-    top: 212px;
+    left: -3vw;
+    top: -42vh;
     transform: rotate(6deg);
     box-shadow: #0000008c 8px 4px 10px 0px;
   }

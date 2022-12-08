@@ -124,6 +124,40 @@
 }
 
 .record-active {
-  background-color: red;
+  background-color: rgb(251, 0, 255);
   background-blend-mode: lighten;
+}
+
+.b-speechreco {
+  height: 11vh;
+  position: relative;
+  top: 58px;
+  left: 58px;
+  width: auto;
+  border: solid 2px $white;
+  color: $black;
+  background: linear-gradient(#ff8400, #ffd500);
+  border-radius: 50%;
+  font-size: 1.1em;
+  text-align: center;
+  padding: 12px;
+  font-family: roboto condensed;
+  transition: ease .3s;
+  text-decoration: none;
+}
+.b-speechreco:hover {
+  color: $white;
+  background: linear-gradient(#4a0070, #ff007a);
+  font-size: 1.1em;
+  transition: ease .3s;
+}
+.b-speechreco a {
+  font-family: roboto condensed;
+  color: $white;
+  text-decoration: none;
+}
+.b-speechreco a:hover {
+  font-size: 1.1em;
+  color: $black;
+  transition: ease .3s;
 }

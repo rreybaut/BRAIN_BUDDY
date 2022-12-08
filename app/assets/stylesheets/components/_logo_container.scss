@@ -1,3 +1,20 @@
+.micro-container {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  .logos {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    .A {
+      z-index: 2;
+      position: relative;
+      left: 0px;
+      width: 50%;
+    }
+  }
+}
 .logos-container {
   width: 100vw;
   display: flex;
@@ -6,20 +23,19 @@
   justify-content: center;
   .logos {
     display: flex;
-    width: 375px;
-    .A {
-      z-index: 2;
-      position: relative;
-      left: 0px;
-      width: 50%;
-    }
+    height: 28vh;
+    justify-content: center;
     .B {
       z-index: 2;
       position: relative;
-      right: 20px;
-      width: 50%;
+      right: -24vh;
     }
   }
+}
+.obj-micro {
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
 }
 .logos-localisation {
   width: 100vw;
