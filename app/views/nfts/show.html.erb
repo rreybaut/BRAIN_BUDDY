@@ -12,3 +12,27 @@
   <br>
   <%= link_to "Delete", nft_path(@nft), method: :delete, data: {confirm: "Are you sure ?"}, class: "b-brainbud" %>
 </div>
+<div class="container-share">
+        <button class="share-btn">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <div class="share-options">
+            <div class="social-media">
+                <button class="social-media-btn"><i class="far fa-folder-open"></i></button>
+                <button class="social-media-btn" href="whatsapp.com"><i class="fab fa-whatsapp"></i></button>
+
+                <button class="social-media-btn"><i class="fab fa-instagram"></i></button>
+                <button class="social-media-btn"><i class="fab fa-twitter"></i></button>
+                <button class="social-media-btn"><i class="fab fa-facebook-f"></i></button>
+                <button class="social-media-btn"><i class="fab fa-linkedin-in"></i></button>
+            </div>
+        </div>
+    </div>
+    <script>
+    const shareBtn = document.querySelector('.share-btn');
+    const shareOptions = document.querySelector('.share-options');
+
+    shareBtn.addEventListener('click', () => {
+        shareOptions.classList.toggle('active');
+    })
+    </script>
