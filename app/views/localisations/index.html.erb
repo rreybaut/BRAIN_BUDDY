@@ -43,8 +43,10 @@
       </div>
     </div>
     <br>
- </div>
-    <h3><%= @localisations[@index].address %></h3>
+    </div>
+    <% if @localisations[@index] %>
+      <h3><%= @localisations[@index].address %></h3>
+    <% end %>
     <br>
     <a href="#">
     <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
