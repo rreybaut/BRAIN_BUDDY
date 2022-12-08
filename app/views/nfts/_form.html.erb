@@ -1,6 +1,14 @@
 <div class="container">
   <%= simple_form_for nft  do |f| %>
-    <%= f.input :photo, as: :file %>
-    <span><%= f.submit %></span>
+  <%  %>
+    <%= f.input :photo, as: :file, required: true  %>
+    <span><%= f.button :submit, class: "d-none submit-nft" %></span>
   <% end %>
 </div>
+<script>
+const photoRequired = document.querySelector("#nft_photo");
+const btnNftSubmit = document.querySelector(".submit-nft");
+photoRequired.addEventListener('change  ', (event)=>{
+  btnNftSubmit.classList.remove('d-none');
+})
+</script>

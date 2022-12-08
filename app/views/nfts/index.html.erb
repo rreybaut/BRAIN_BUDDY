@@ -4,11 +4,10 @@
     <ul class="nft_container">
       <% @nfts.each do |nft| %>
         <li>
-          <% if nft.photo.attached? %>
-            <%= link_to nft_path(nft) do %>
-              <%= cl_image_tag nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
+          <%= link_to nft_path(nft) do %>
+          <%= cl_image_tag nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
             <% end %>
-          <% end %>
+
         </li>
       <% end %>
     </ul>
