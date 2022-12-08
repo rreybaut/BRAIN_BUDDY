@@ -50,7 +50,7 @@ export const commandeVocal = () => {
           if (speechResult.split(' ').includes('gps') || speechResult.split(' ').includes('localisation')) {
             document.location.assign('/localisations')
           }
-          if (speechResult.split(' ').includes('photo') || speechResult.split(' ').includes('nft')) {
+          if (speechResult.split(' ').includes('photo') || speechResult.split(' ').includes('photos')) {
             document.location.assign('/nfts')
           }
           if (speechResult.split(' ').includes('enregistrer') || speechResult.split(' ').includes('enregistré')) {
