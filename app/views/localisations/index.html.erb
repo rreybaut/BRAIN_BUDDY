@@ -1,59 +1,46 @@
 <div class="local_page">
   <%= render "shared/logo" %>
   <div class="local_box">
-
-    <h2 class="subtitle "><strong>localiser</strong> une adresse<h2>
+    <h2 class="subtitle "><strong>Localiser</strong> une adresse<h2>
+  </div>
       <div id="new_local">
         <%= simple_form_for @localisation do |f| %>
           <div><%= f.text_field :address, placeholder: "recherche…", id: "form", class:"form-control address_search" %></div>
-          <div><%= button_tag type: 'submit', class: "btn", id: "register-button" do %>
+            <div><%= button_tag type: 'submit', class: "btn", id: "register-button" do %>
             <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          <% end %></div>
-        <% end %>
-      </div>
-
-    <div class="map-address">
-      <div action="/localisations" id="div_local">
-        <select name="yours" id="address-select" >
-          <option>Vos adresses enregistrées</option>
-          <% @localisations.each_with_index do |localisation, index| %>
-            <option value=<%= index %>>
-              <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
-            </option>
           <% end %>
-        </select>
-      </form>
+        </div>
+        <% end %>
+        </div>
 
-    <div class="edit_del-btn_loca">
-      <button src="#" class="btn" id="register-button"><i class="fa-regular fa-trash-can"></i></button>
-    </div>
+      <div class="map-address">
+        <div action="/localisations" id="div_local">
+            <select name="yours" id="address-select" >
+              <option>Vos adresses enregistrées</option>
+                <% @localisations.each_with_index do |localisation, index| %>
+                <option value=<%= index %>>
+                <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
+              </option>
+              <% end %>
+            </select>
+          </div>
+        </div>
+        <div class="mapbox-container">
+          <div class="map_style"
+            data-controller="map"
+            data-map-markers-value="<%= [@markers[@index]].to_json %>"
+            data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
+          </div>
 
-    <div class="mapbox-container">
-      <div class="map_style"
-        data-controller="map"
-        data-map-markers-value="<%= [@markers[@index]].to_json %>"
-        data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
-      </div>
-    </div>
+
+
+  </div>
 
     <div class="logos-localisation">
       <div class="logos">
         <%= image_tag "bb_micro.png", class: "A" %>
         <%= image_tag "bb_loupe.png", class: "logos B" %>
       </div>
-    </div>
-    <br>
-    </div>
-    <% if @localisations[@index] %>
-      <h3><%= @localisations[@index].address %></h3>
-    <% end %>
-    <br>
-    <a href="#">
-    <button style='font-size:20px'>Delete <i class='fas fa-trash-alt'></i></button>
-    <br>
-    <br>
-
-  </div>
 </div>
 
 <script>
