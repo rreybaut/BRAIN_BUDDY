@@ -1,25 +1,39 @@
 // *{
+
 //   margin: 0;
+
 //   padding: 0;
+
 //   box-sizing: border-box;
+
 // }
 
+
+
+
 // body{
+
 //   width: 100%;
+
 //   height: 100vh;
+
 //   display: flex;
+
 //   justify-content: center;
+
 //   align-items: center;
+
 //   background: #ff7d7d;
+
 // }
 
 .share-btn{
-  left: 174px;
-  top: -66px;
+  left: 50px;
+  top: -300px;
   position: relative;
   border: none;
   background: #fff;
-  color: #ff7d7d;
+  color: #ec3575;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -31,15 +45,17 @@
 }
 
 .share-options{
+  display: contents;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  bottom: 50%;
-  left: 50%;
-  width: auto;
+  // bottom: 50%;
+  // left: 50%;
+  width: 346px;
   height: auto;
   transform-origin: bottom left;
   transform: scale(0);
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   background: rgba(15, 15, 15, 0.5);
   color: #fff;
   padding: 20px;
@@ -49,31 +65,22 @@
 }
 
 .share-options.active{
-  transform: translateX(-35%) translateY(116%) scale(0.7);
+  transform: scale(0.7);
   transition-delay: 0s;
-}
-
-.title{
-  opacity: 0;
-  transition: .5s;
-  transition-delay: 0s;
-  font-size: 20px;
-  text-transform: capitalize;
-  border-bottom: 1px solid #fff;
-  width: fit-content;
-  padding: 0 20px 3px 0;
 }
 
 .social-media{
+  // display: inline-grid;
   opacity: 0;
   transition: .5s;
   transition-delay: 0s;
-  width: 250px;
-  height: 120px;
+  // width: 346px;
+  // height: auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: -100px;
+  flex-direction: column;
 }
 
 .social-media-btn{
@@ -90,27 +97,23 @@
   text-align: center;
 }
 
-.social-media-btn:nth-child(1){
-  background: #FFA654;
-}
-
-.social-media-btn:nth-child(2){
+.whatsapp-btn{
   background: #25D366;
 }
 
-.social-media-btn:nth-child(3){
+.twitter-btn{
+  background:  #1DA1F2 ;
+}
+
+.instagram-btn{
   background: #E4405F;
 }
 
-.social-media-btn:nth-child(4){
-  background: #1DA1F2;
-}
-
-.social-media-btn:nth-child(5){
+.fb-btn{
   background: #1877F2;
 }
 
-.social-media-btn:nth-child(6){
+.lkd-btn{
   background: #0A66C2;
 }
 
