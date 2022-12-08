@@ -19,6 +19,7 @@ class NftsController < ApplicationController
   def create
     @nft = Nft.new(nft_params)
     @nft.user_id = current_user.id
+
     if @nft.save
       redirect_to nfts_path(@nft)
     else
