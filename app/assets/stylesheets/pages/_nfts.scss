@@ -18,12 +18,21 @@ body {
       gap: 8px;
     }
 
-  .nft-form{
-    inset: 0px !important;
-  }
+    .nft-form{
+      inset: 0px !important;
+    }
 
-  .nft_container {
-    position: absolute;
-    top: 226px;
+    .nft_container {
+      width: 258px;
+      z-index: 3;
+      position: absolute;
+      top: 226px;
+  }
+  .nft-photo {
+    padding: 8px;
+    margin-bottom: 8px;
+    border: solid 1px #ffffff29;
+    border-radius: 4px;
+    box-shadow: #003b3a66 2px 4px 12px;
   }
 }

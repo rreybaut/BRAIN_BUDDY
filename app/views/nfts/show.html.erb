@@ -8,7 +8,7 @@
     <%= cl_image_tag @nft.photo.key, width: "200px", height: "auto", class: "nft-photo" %>
 
   <br>
-  <%= link_to "Nft", nfts_path, class: "b-brainbud" %>
+  <%= link_to "Retour", nfts_path, class: "b-brainbud" %>
   <br>
   <%= link_to "Delete", nft_path(@nft), method: :delete, data: {confirm: "Are you sure ?"}, class: "b-brainbud" %>
 </div>

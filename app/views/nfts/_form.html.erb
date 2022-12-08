@@ -8,7 +8,10 @@
 <script>
 const photoRequired = document.querySelector("#nft_photo");
 const btnNftSubmit = document.querySelector(".submit-nft");
-photoRequired.addEventListener('change  ', (event)=>{
+
+photoRequired.addEventListener('change', (event)=>{
   btnNftSubmit.classList.remove('d-none');
+  photoRequired.reset();
 })
+console.log('hello2');
 </script>
