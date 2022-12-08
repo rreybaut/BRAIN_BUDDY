@@ -2,11 +2,16 @@
   <%= render "shared/logo" %>
   <div class="vocal_wrap">
     <h2 class="subtitle">créer un <strong>mémo vocal</strong></h2>
-  </div>
+    <div class="micro-container">
+      <div class="obj-micro">
+        <button id="startTranscript" class="b-speechreco"><i class="fa-solid fa-bullhorn"></i> Parlez</button>
+        <%= image_tag "bb_micro.png", class: "A" %>
+      </div>
+    </div>
+    </div>
 
   <div class="sound_record">
-    <button id="startTranscript" class="b-brainbud"><i class="fa-solid fa-bullhorn"></i> Parlez</button>
-    <p class="output">...diagnostic messages</p>
+    <p class="output">Votre dictée :</p>
 
     <button id="startRecordingButton" class="b-brainbud"><i class="fa-solid fa-wand-magic-sparkles"></i> Start</button>
     <button id="stopRecordingButton" class="b-brainbud"><i class="fa-solid fa-microphone-slash"></i> Stop</button>
@@ -17,7 +22,6 @@
 
   <div class="logos-container">
     <div class="logos">
-      <%= image_tag "bb_micro.png", class: "A" %>
       <%= image_tag "bb_loupe.png", class: "logos B" %>
     </div>
   </div>

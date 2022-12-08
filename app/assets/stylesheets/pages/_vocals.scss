@@ -29,6 +29,7 @@ body {
   }
 
   .sound_record {
+    z-index: 3;
     position: relative;
     top: -70px;
     display: flex;
@@ -64,13 +65,8 @@ body {
     scrollbar-width: thin;
   }
 }
-//   /* Medium devices */
-// @media (max-width: 1400px) {
-//   .vocalpage {
-//     width: 100vw;
-//     height: 100vh;
-//   }
-// }
-// .far {
-//   color: white
-// }
+
+.output p {
+  color: #ffffff80;
+  letter-spacing: 0.6em;
+}
