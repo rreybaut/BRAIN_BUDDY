@@ -47,6 +47,12 @@ export const commandeVocal = () => {
           if (speechResult.split(' ').includes('list') || speechResult.split(' ').includes('liste')) {
             document.location.assign('/lists')
           }
+          if (speechResult.split(' ').includes('gps') || speechResult.split(' ').includes('localisation')) {
+            document.location.assign('/localisations')
+          }
+          if (speechResult.split(' ').includes('photo') || speechResult.split(' ').includes('nft')) {
+            document.location.assign('/nfts')
+          }
           if (speechResult.split(' ').includes('enregistrer') || speechResult.split(' ').includes('enregistré')) {
             document.querySelector('#startRecordingButton').click()
           }
