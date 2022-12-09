@@ -10,8 +10,8 @@ body {
   position: relative;
 
   #div_local {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
   }
 
   #new_local {
@@ -66,6 +66,21 @@ body {
     font-size: large;
     top: 220px;
     // left: 9vw;
+    border-radius: 6px;
+    padding: 6px 8px;
+    height: 34px;
+    width: 306px;
+    border: 0;
+    z-index: 3;
+  }
+  #address-select2 {
+    position: relative;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-size: large;
+    top: 220px;
+    left: 40vw;
     border-radius: 6px;
     padding: 6px 8px;
     height: 34px;
