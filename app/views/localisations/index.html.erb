@@ -7,39 +7,35 @@
         <%= simple_form_for @localisation do |f| %>
           <div><%= f.text_field :address, placeholder: "recherche…", id: "form", class:"form-control address_search" %></div>
             <div><%= button_tag type: 'submit', class: "btn", id: "register-button" do %>
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          <% end %>
-        </div>
-        <% end %>
-        </div>
-
-      <div class="map-address">
-        <div action="/localisations" id="div_local">
-            <select name="yours" id="address-select" >
-              <option>Vos adresses enregistrées</option>
-                <% @localisations.each_with_index do |localisation, index| %>
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <% end %>
+              </div>
+            <% end %>
+            </div>
+            <div class="map-address">
+              <div action="/localisations" id="div_local">
+                <select name="yours" id="address-select" >
+                <option>Vos adresses enregistrées</option>
+                  <% @localisations.each_with_index do |localisation, index| %>
                 <option value=<%= index %>>
-                <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
-              </option>
+                  <%= "#{localisation.address}  (créé le #{localisation.created_at.strftime("%d/%m/%Y")})" %>
+                </option>
               <% end %>
             </select>
+          <div class="mapbox-container">
+            <div class="map_style"
+              data-controller="map"
+              data-map-markers-value="<%= [@markers[@index]].to_json %>"
+              data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
+            </div>
           </div>
         </div>
-        <div class="mapbox-container">
-          <div class="map_style"
-            data-controller="map"
-            data-map-markers-value="<%= [@markers[@index]].to_json %>"
-            data-map-api-key-value="pk.eyJ1IjoiZWdsZXIiLCJhIjoiY2xiMmRnM2Z1MDNzMzNwcXRzcGZpNjA1MyJ9.OgPtKkpm5SBI_o_rk1tAiw">
-          </div>
-
-
-
-  </div>
-
-    <div class="logos-localisation">
-      <div class="logos">
-        <%= image_tag "bb_micro.png", class: "A" %>
-        <%= image_tag "bb_loupe.png", class: "logos B" %>
+      </div>
+      <div class="logos-localisation">
+        <div class="logos">
+          <%= image_tag "bb_micro.png", class: "A" %>
+          <%= image_tag "bb_loupe.png", class: "logos B" %>
+        </div>
       </div>
 </div>
 

@@ -2,7 +2,7 @@
   <%= simple_form_for nft  do |f| %>
   <%  %>
     <%= f.input :photo, as: :file, required: true  %>
-    <span><%= f.button :submit, class: "d-none submit-nft" %></span>
+    <span><%= f.button :submit, value:'Créer', class: "d-none submit-nft btn btn-new_user" %></span>
   <% end %>
 </div>
 <script>
@@ -13,5 +13,4 @@ photoRequired.addEventListener('change', (event)=>{
   btnNftSubmit.classList.remove('d-none');
   photoRequired.reset();
 })
-console.log('hello2');
 </script>
