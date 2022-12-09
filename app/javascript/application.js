@@ -14,10 +14,11 @@ ActiveStorage.start();
 import { syntheseVocal } from "./components/synthese_vocal";
 import { commandeVocal } from "./components/commande_vocal";
 import { soundRecord } from "./components/sound_record";
+import { socialButtons } from "./components/social_buttons";
 
 document.addEventListener("turbolinks:load", function () {
-  console.log('coucou');
   soundRecord()
   commandeVocal()
   syntheseVocal()
+  socialButtons()
 });
