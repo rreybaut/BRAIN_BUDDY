@@ -25,6 +25,8 @@ body {
     }
 
     .nft_container {
+      display: flex;
+      justify-content: center;
       width: 258px;
       z-index: 3;
       position: absolute;
