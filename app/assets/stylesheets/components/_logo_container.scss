@@ -18,17 +18,15 @@
 .logos-container {
   width: 100vw;
   display: flex;
-  position: absolute;
-  bottom: 6px;
+  position: relative;
+  bottom: 7vh;
   justify-content: center;
   .logos {
     display: flex;
-    height: 28vh;
-    justify-content: center;
+    height: 21vh;
     .B {
       z-index: 2;
       position: relative;
-      right: -24vh;
     }
   }
 }

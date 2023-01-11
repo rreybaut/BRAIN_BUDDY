@@ -10,3 +10,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  overflow-y: scroll; /* Add the ability to scroll */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
+  font-family: 'Roboto Bold', sans-serif;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 420px) {
+  body {
+    height: auto;
+  }
+}

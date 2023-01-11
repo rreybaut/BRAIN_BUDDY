@@ -53,6 +53,15 @@
   padding: 0 12px;
   transition: ease .3s;
 }
+#btn-new_user2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: roboto condensed;
+  width: 80px;
+  padding: 0px;
+  height: 30px;
+  transition: ease .3s;
+}
 .btn-localisation {
   border: none;
   background: #45f3ff;
@@ -63,7 +72,6 @@
   margin-top: 4px;
   transition: ease .3s;
 }
-
 .b-brainbud {
   border: solid 2px $white;
   width: 160px;
@@ -94,7 +102,6 @@
   color: $black;
   transition: ease .3s;
 }
-
 .edit_del-btn_loca {
   z-index: 3;
   right: 20px;
@@ -122,12 +129,10 @@
 #register-button:hover {
   background-color: $black;
 }
-
 .record-active {
   background-color: rgb(251, 0, 255);
   background-blend-mode: lighten;
 }
-
 .b-speechreco {
   height: 11vh;
   position: relative;

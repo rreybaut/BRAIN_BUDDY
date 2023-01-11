@@ -1,19 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
-  font-family: 'Roboto Bold', sans-serif;
-}
 .local_page {
   z-index: 0;
-  height: 90vh;
   position: relative;
-
-  #div_local {
-    // display: flex;
-    // justify-content: center;
-  }
-
   #new_local {
     display: flex;
     justify-content: center;
@@ -21,7 +8,6 @@ body {
     top: -40px;
     left: -30px;
   }
-
   .local_box {
     position: relative;
     top: -90px;
@@ -30,7 +16,6 @@ body {
     align-items: center;
     gap: 8px;
   }
-
   .create-address-container {
     display: flex;
     justify-content:center;
