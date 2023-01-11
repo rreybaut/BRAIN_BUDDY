@@ -5,6 +5,21 @@ font-weight: 100;
 }
 .cards {
   img {
-    width: 266px;
+    width: 100px;
   }
+  a {
+    text-decoration: none;
+    color: $fushia;
+    font-weight: 400;
+  }
+  a:hover{
+    color: $verttitle;
+  }
+}
+.fa-icon {
+  font-size: 1.4em;
+  color: $verttitle;
+}
+.fa-icon:hover {
+  color: $fushia;
 }

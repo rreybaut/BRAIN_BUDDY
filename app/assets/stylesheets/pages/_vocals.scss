@@ -8,7 +8,6 @@ body {
   z-index: 0;
   height: 90vh;
   position: relative;
-
   .vocal_wrap {
     position: relative;
     top: -90px;
@@ -17,7 +16,6 @@ body {
     align-items: center;
     gap: 8px;
   }
-
   .vocal_record {
     z-index: 3;
     position: relative;
@@ -27,7 +25,6 @@ body {
     align-items: center;
     gap: 0.8em;
   }
-
   .sound_record {
     z-index: 3;
     position: relative;
@@ -37,7 +34,6 @@ body {
     align-items: center;
     gap: 0.8em;
   }
-
   .flexbox {
     display: flex;
     justify-content: space-evenly;
@@ -56,7 +52,6 @@ body {
     width: 50%;
     margin: auto;
   }
-
   .scroller {
     width: 500px;
     height: 300px;
@@ -65,7 +60,6 @@ body {
     scrollbar-width: thin;
   }
 }
-
 .output p {
   color: #ffffff80;
   letter-spacing: 0.6em;
