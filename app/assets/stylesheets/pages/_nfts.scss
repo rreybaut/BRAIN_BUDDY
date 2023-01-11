@@ -1,40 +1,32 @@
-body {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
-  font-family: 'Roboto Bold', sans-serif;
-}
-  .nftpage {
-    z-index: 0;
-    height: 100vh;
+.nftpage {
+  z-index: 0;
+  position: relative;
+  .nft_wrap {
+    width: 40vw;
+    margin: auto;
     position: relative;
-    .nft_wrap {
-      width: 40vw;
-      margin: auto;
-      position: relative;
-      top: -5em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-    .nft-form{
-      inset: 0px !important;
-    }
-    .nft_container {
-      display: flex;
-      justify-content: center;
-      width: 258px;
-      z-index: 3;
-      position: absolute;
-      top: 226px;
+    top: -5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
-  .nft-photo {
-    padding: 8px;
-    margin-bottom: 8px;
-    border: solid 1px #ffffff29;
-    border-radius: 4px;
-    box-shadow: #003b3a66 2px 4px 12px;
+  .nft-form{
+    inset: 0px !important;
   }
+  .nft_container {
+    display: flex;
+    justify-content: center;
+    width: 258px;
+    z-index: 3;
+    position: absolute;
+    top: 226px;
+}
+.nft-photo {
+  padding: 8px;
+  margin-bottom: 8px;
+  border: solid 1px #ffffff29;
+  border-radius: 4px;
+  box-shadow: #003b3a66 2px 4px 12px;
+}
 }

@@ -1,24 +1,13 @@
-body {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
-  font-family: 'Roboto Bold', sans-serif;
-  .form-list{
-    position: relative;
-  }
-}
 .listpage {
   z-index: 1;
-  height: 100vh;
   position: relative;
   .list_record {
     position: relative;
-    top: -86px;
+    top: -100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
   }
   .messages {
     margin: auto;
@@ -32,8 +21,13 @@ body {
     font-family: roboto light;
     font-size: 0.9em;
   }
+  .form-list {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: -28px;
+  }
   .obj-postit {
-    margin-bottom: 300px;
     z-index: 5;
     position: absolute;
     padding: 12px;
@@ -43,10 +37,28 @@ body {
     flex-direction: column;
     height: 218px;
     width: 190px;
-    left: -3vw;
-    top: -42vh;
     transform: rotate(6deg);
-    box-shadow: #0000008c 8px 4px 10px 0px;
+    box-shadow: #00000012 8px 4px 10px 0px;
+  }
+  .obj-flex {
+    // opacity: 0.85;
+    // background-blend-mode: multiply;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    h5 {
+      font-family: roboto;
+      font-size: 1.4em;
+    }
+    ul {
+      padding-left: 12px;
+    }
+    li {
+      font-size: 1.1em;
+    }
+    a {
+      text-decoration: none;
+    }
   }
   .scroller {
     width: 500px;
@@ -67,26 +79,6 @@ body {
       color: $black;
     }
   }
-  .obj-flex {
-    opacity: 0.85;
-    background-blend-mode: multiply;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    h5 {
-      font-family: roboto;
-      font-size: 1.4em;
-    }
-    ul {
-      padding-left: 12px;
-    }
-    li {
-      font-size: 1.1em;
-    }
-    a {
-      text-decoration: none;
-    }
-  }
   .edit_del-btn {
     display: flex;
     gap: 4px;
@@ -96,24 +88,31 @@ body {
   }
 }
 .pos-show-form {
-  position: absolute;
-  top: 210px;
-  left: 7px;
-  .btn-new_user{
+  position: relative;
+  top: -85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn-new_user {
     width: fit-content;
     padding: 4px 16px;
   }
 }
 .pos-show-H5 {
-  display: flex;
+  width: 262px;
+  text-align: center;
   flex-direction: column;
-  position: absolute;
-  top: 134px;
-  left: 88px;
-  background-color: $post-it;
+  position: relative;
+  top: -84px;
+  background-color: #fffba3;
   padding: 12px;
   em {
     text-align: center;
     font-size: 0.8em;
   }
+}
+.task-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
