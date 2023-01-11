@@ -63,7 +63,6 @@
   margin-top: 4px;
   transition: ease .3s;
 }
-
 .b-brainbud {
   border: solid 2px $white;
   width: 160px;
@@ -94,7 +93,6 @@
   color: $black;
   transition: ease .3s;
 }
-
 .edit_del-btn_loca {
   z-index: 3;
   right: 20px;
@@ -122,12 +120,10 @@
 #register-button:hover {
   background-color: $black;
 }
-
 .record-active {
   background-color: rgb(251, 0, 255);
   background-blend-mode: lighten;
 }
-
 .b-speechreco {
   height: 11vh;
   position: relative;

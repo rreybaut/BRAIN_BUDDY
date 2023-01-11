@@ -1,11 +1,12 @@
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
   font-family: 'Roboto Bold', sans-serif;
 }
 .homepage {
-  height: 90vh;
+  height: 100vh;
   position: relative;
   .links-homepage {
     z-index: 3;
@@ -17,7 +18,6 @@ body {
     gap: 0.8em;
     justify-content: center;
   }
-
   .home_wrap {
     position: relative;
     top: -90px;

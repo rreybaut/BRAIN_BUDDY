@@ -3,7 +3,6 @@
   margin: auto;
   position: relative;
 }
-
 .share-btn{
   top: -204px;
   border: none;
@@ -18,11 +17,8 @@
   cursor: pointer;
   z-index: 2;
 }
-
 .share-options{
   display: contents;
-  // justify-content: center;
-  // align-items: center;
   position: absolute;
   width: 346px;
   height: auto;
@@ -36,12 +32,10 @@
   transition: .5s;
   transition-delay: .5s;;
 }
-
 .share-options.active{
   transform: scale(0.7);
   transition-delay: 0s;
 }
-
 .social-media{
   top: 60px;
   position: relative;
@@ -57,7 +51,6 @@
   margin: -100px;
   transition: ease .2s;
 }
-
 .social-media-btn{
   border: none;
   width: 50px;
@@ -71,27 +64,21 @@
   margin: 0 5px;
   text-align: center;
 }
-
 .whatsapp-btn{
   background: #25D366;
 }
-
 .twitter-btn{
   background:  #1DA1F2 ;
 }
-
 .instagram-btn{
   background: #E4405F;
 }
-
 .fb-btn{
   background: #1877F2;
 }
-
 .lkd-btn{
   background: #0A66C2;
 }
-
 .link-container{
   opacity: 0;
   transition: .5s;
@@ -106,14 +93,12 @@
   overflow: hidden;
   padding: 0 10px;
 }
-
 .link{
   width: 80%;
   height: 100%;
   line-height: 40px;
   color: #000;
 }
-
 .copy-btn{
   position: absolute;
   right: 0;
@@ -126,7 +111,6 @@
   text-transform: capitalize;
   font-size: 16px;
 }
-
 .share-options.active .title,
 .share-options.active .social-media,
 .share-options.active .link-container{

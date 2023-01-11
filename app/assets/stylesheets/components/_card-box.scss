@@ -1,11 +1,25 @@
 .card-box {
-display: flex;
-flex-direction: row;
-font-weight: 100;
+  position: relative;
+  margin-top: 22px;
+  width: 76%;
+  font-weight: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
 }
 .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff6b;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  width: 160px;
   img {
-    width: 100px;
+    width: 180px;
   }
   a {
     text-decoration: none;
@@ -13,13 +27,37 @@ font-weight: 100;
     font-weight: 400;
   }
   a:hover{
-    color: $verttitle;
+    color: $blue;
   }
 }
 .fa-icon {
   font-size: 1.4em;
-  color: $verttitle;
+  color: $fushia;
 }
 .fa-icon:hover {
-  color: $fushia;
+  color: $blue;
+}
+@media (max-width: 860px) {
+  .card-box {
+    margin-top: 12px;
+    width: 90%;
+    gap: 14px;
+  }
+  .cards {
+    img {
+      width: 140px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .card-box {
+    margin-top: 4px;
+    width: 94%;
+    gap: 2px;
+  }
+  .cards {
+    img {
+      width: 100px;
+    }
+  }
 }

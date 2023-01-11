@@ -1,18 +1,17 @@
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: linear-gradient(180deg, #008f8c, #93d4d3) !important;
   font-family: 'Roboto Bold', sans-serif;
-
   .form-list{
     position: relative;
   }
 }
 .listpage {
   z-index: 1;
-  height: 90vh;
+  height: 100vh;
   position: relative;
-
   .list_record {
     position: relative;
     top: -86px;
@@ -21,7 +20,6 @@ body {
     align-items: center;
     gap: 8px;
   }
-
   .messages {
     margin: auto;
     color: $verttitle;
