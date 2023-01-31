@@ -3,6 +3,10 @@
 import "./controllers"
 import "bootstrap"
 
+// Test Fabrice speak open "en continue"
+import { Turbo } from "@hotwired/turbo-rails";
+Turbo.session.drive = false;
+
 import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
